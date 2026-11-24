@@ -212,13 +212,14 @@ saathishield-ai/
 
 ### Step 1: Install Dependencies & Run App
 ```bash
-# Navigate to the frontend directory
+# Terminal 1: Start Python FastAPI Backend
+pip install -r backend/requirements.txt
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+# API Docs available at http://127.0.0.1:8000/docs
+
+# Terminal 2: Start Vite Frontend (in project root)
 cd frontend
-
-# Install dependencies (React 19, TypeScript, Lucide)
 npm install
-
-# Start local development server
 npm run dev
 # The website will be live at http://localhost:5173/
 

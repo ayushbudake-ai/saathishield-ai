@@ -24,7 +24,7 @@ pip install -r backend/requirements.txt
 cp .env.example .env
 
 # 3. Start Uvicorn development server
-uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 # API Swagger UI available at: http://127.0.0.1:8000/docs
 # Health check available at: http://127.0.0.1:8000/api/health
 ```
