@@ -67,7 +67,7 @@ This document describes the structure, wireframes, and responsive behavioral lay
   5. *Screen Sharing App Trojans*: Dangers of installing AnyDesk, RustDesk, QuickSupport on caller advice.
   6. *Wrong Transfer Fraud*: "Mistakenly sent money, please return it" chargeback trick.
   7. *Fake Courier & Parcel Customs*: Fake DHL/FedEx customs duty demands.
-  8. *Safe UPI Habits*: 5 golden rules for daily digital transactions.
+  8. *Safe UPI Habits*: 5 fundamental rules for daily digital transactions.
 
 ### Page 6: Dataset & Methodology Dashboard (`/dashboard`)
 - **Metric Cards**:

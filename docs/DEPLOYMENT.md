@@ -52,7 +52,7 @@ npm run preview
 ---
 
 ## 2. Testing Chatbot Intelligence & Safety
-Run the comprehensive 25-point automated evaluation suite:
+Run the comprehensive 36-point automated evaluation suite:
 ```bash
 python scripts/test_chatbot_intelligence.py
 ```

@@ -124,10 +124,10 @@ async def process_chat_message(
             "authority": "Reserve Bank of India"
         })
 
-    # 5. AI Response Generation
+    # 5. AI Response Generation & Grounded Evidence Relevance
     answer_text = None
     response_mode = "retrieval_only"
-    confidence = 0.50
+    retrieval_relevance = 0.50
 
     context_chunks = [
         f"Verified Scenario: {item['prompt']}\nRecommended Safety Action: {item['completion']}"
@@ -140,18 +140,18 @@ async def process_chat_message(
         if answer_text:
             response_mode = "live_ai"
             top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
-            confidence = round(top_retrieval_sim, 2)
+            retrieval_relevance = round(top_retrieval_sim, 2)
 
     elif settings.AI_PROVIDER == "openai" and settings.OPENAI_API_KEY:
         answer_text = await call_openai(message, conversation_history, context_chunks)
         if answer_text:
             response_mode = "live_ai"
             top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
-            confidence = round(top_retrieval_sim, 2)
+            retrieval_relevance = round(top_retrieval_sim, 2)
 
     # Fallback to retrieval-only mode if no live AI is active or if generation failed
     if not answer_text:
-        answer_text, confidence = synthesize_retrieval_response(
+        answer_text, retrieval_relevance = synthesize_retrieval_response(
             message,
             detected_lang,
             retrieved_items,
@@ -175,6 +175,7 @@ async def process_chat_message(
         "response_mode": response_mode,
         "recommended_actions": actions,
         "sources": sources,
-        "confidence": confidence,
+        "retrieval_relevance": retrieval_relevance,
+        "confidence": retrieval_relevance,
         "suggested_followups": followups
     }

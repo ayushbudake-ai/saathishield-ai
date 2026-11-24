@@ -27,6 +27,7 @@ export interface ChatMessage {
   suggestedFollowups?: string[];
   recommendedActions?: string[];
   sourcesList?: { name: string; url: string; authority?: string }[];
+  retrievalRelevance?: number;
   confidence?: number;
 }
 

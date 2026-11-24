@@ -80,16 +80,16 @@
   - In-memory RAG retriever loading 460 dataset pairs and official citations.
   - Heuristic language detector (Hindi Devanagari, Hinglish Roman, English).
   - 12-category bidirectional intent detector with multi-turn context retention.
-  - Separate high-priority emergency triage layer with 1930 and golden-hours escalation.
+  - Separate high-priority emergency triage layer with immediate 1930 and cybercrime.gov.in escalation.
   - Server-side AI provider integration (Gemini / OpenAI / Grounded Fallback).
   - Real-time PII & credential scrubbing sanitizer (zero credential storage or leaks).
 - [x] Upgrade frontend assistant engine & UI (`frontend/src/utils/engine.ts`, `AssistantView.tsx`):
-  - Async API integration with 6s timeout and resilient grounded client fallback.
+  - Async API integration with configurable 15s timeout and resilient grounded client fallback.
   - Live response mode badges (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`).
   - Recommended action pills and clickable dynamic follow-up chips.
   - Clear error and retry states.
 - [x] Build automated chatbot intelligence evaluation suite (`scripts/test_chatbot_intelligence.py`):
-  - 25 / 25 test cases passed (100.0%) across direct, open-ended, multi-turn, multilingual, and safety scenarios.
+  - 36 / 36 test cases passed (100.0%) across direct, open-ended, multi-turn, multilingual, and safety scenarios.
 - [x] Update documentation and audit reports (`README.md`, `docs/TEST_REPORT.md`, `docs/PROGRESS_LOG.md`, `docs/DEPLOYMENT.md`).
 
 ### Phase 10: Open-Ended Chatbot Intelligence & Consistency Audit (COMPLETED)
@@ -109,3 +109,10 @@
 - [x] README & documentation sync: Synchronized 36-point chatbot evaluation count, updated timeout and architecture descriptions, verified clean relative links.
 - [x] Emergency safety terminology: Audited and removed all wording implying a guaranteed 2–3-hour recovery or freezing window across views, handlers, and prompt templates, reinforcing immediate 1930 and cybercrime.gov.in reporting.
 - [x] Executed full verification suite: Python backend test cases, 36/36 chatbot intelligence tests, 460-row dataset validation, and TypeScript production build.
+
+### Phase 12: Remaining Critical Fixes & Retrieval Relevance Standardization (COMPLETED)
+- [x] CORS origin sanitization: Explicitly filtered out any `*` wildcard even if supplied in environment variables, maintaining explicit origins list with enabled credentials.
+- [x] Renamed confidence to `retrieval_relevance` across backend API models, response orchestrators, emergency handlers, and frontend TypeScript interfaces; added relevance indicator in Assistant UI.
+- [x] Purged all remaining references to "Golden Rules" or guaranteed recovery from learning modules (`The Fundamental Rule of UPI PIN`), source registers, and UI strings.
+- [x] Verified Git tracking: confirmed all 14 files in `backend/` are tracked on main; verified zero local `file:///` URLs.
+- [x] Executed full test and verification pipeline: 36/36 chatbot intelligence tests, dataset validation, automated QA suite, and frontend build.

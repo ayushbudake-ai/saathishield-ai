@@ -335,7 +335,7 @@ def generate_grounded_completion(archetype, lang):
         elif lang == "hi-en":
             return (
                 "Yeh 100% fraud scam hai. QR code ko scan bilkul mat kijiye aur apna UPI PIN enter mat kijiye.\n\n"
-                "Golden Rule of UPI:\n"
+                "Fundamental Rule of UPI:\n"
                 "1. Money receive karne ke liye kabhi bhi QR code scan nahi karna padta aur na hi UPI PIN daalna padta hai.\n"
                 "2. UPI PIN sirf aur sirf aapke account se paise katne (send karne) ke liye use hota hai.\n"
                 "3. Agar aapne PIN enter kiya, to paise aane ke bajay aapke bank account se turant cut jayenge.\n\n"

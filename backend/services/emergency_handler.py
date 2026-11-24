@@ -174,6 +174,7 @@ def format_emergency_response(intent: str, lang: str, message: str = "") -> Dict
         "response_mode": "emergency",
         "recommended_actions": actions,
         "sources": sources,
+        "retrieval_relevance": confidence,
         "confidence": confidence,
         "suggested_followups": followups
     }

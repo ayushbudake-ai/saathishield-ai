@@ -147,7 +147,8 @@ for tc in direct_cases:
         assert_contains_any(data["answer"], tc["must_contain"], tc["name"])
         assert_not_contains(data["answer"], tc["forbidden"], tc["name"])
         assert len(data["sources"]) > 0, "No sources cited"
-        record_test(tc["name"], True, f"(Intent: {data['detected_intent']}, Mode: {data['response_mode']}, Conf: {data['confidence']})")
+        rel_score = data.get("retrieval_relevance", data.get("confidence", 0.0))
+        record_test(tc["name"], True, f"(Intent: {data['detected_intent']}, Mode: {data['response_mode']}, Relevance: {rel_score})")
     except Exception as e:
         record_test(tc["name"], False, f": {e}")
 
@@ -477,7 +478,8 @@ try:
     # In offline retrieval-only mode, it must honestly state limited knowledge mode rather than inventing a recipe
     if d["response_mode"] == "retrieval_only":
         assert "limited knowledge mode" in d["answer"].lower() or "verified" in d["answer"].lower()
-    record_test("Unrecognized / Out-of-Domain Topic Handling", True, f"(Mode: {d['response_mode']}, Conf: {d['confidence']})")
+    rel_score = d.get("retrieval_relevance", d.get("confidence", 0.0))
+    record_test("Unrecognized / Out-of-Domain Topic Handling", True, f"(Mode: {d['response_mode']}, Relevance: {rel_score})")
 except Exception as e:
     record_test("Unrecognized Topic Handling", False, f": {e}")
 

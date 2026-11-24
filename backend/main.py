@@ -48,7 +48,8 @@ class ChatResponse(BaseModel):
     response_mode: str
     recommended_actions: List[str]
     sources: List[SourceItem]
-    confidence: float = Field(..., description="Evidence relevance score computed from knowledge retrieval similarity (0.0 to 1.0)")
+    retrieval_relevance: float = Field(..., description="Cosine similarity relevance of retrieved knowledge evidence (0.0 to 1.0)")
+    confidence: Optional[float] = Field(None, description="Backwards-compatible alias for retrieval_relevance")
     suggested_followups: List[str]
 
 @app.get("/api/health")
@@ -68,6 +69,7 @@ async def health_check():
         "operating_mode": operating_mode,
         "knowledge_items_loaded": len(retriever.knowledge_items),
         "official_sources_registered": len(retriever.sources),
+        "allowed_origins": settings.ALLOWED_ORIGINS,
         "rate_limit_per_minute": settings.RATE_LIMIT_PER_MINUTE
     }
 

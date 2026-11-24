@@ -34,11 +34,10 @@ class Settings:
     RATE_LIMIT_PER_MINUTE: int = int(os.getenv("RATE_LIMIT_PER_MINUTE", "60"))
     REQUEST_TIMEOUT_SECONDS: float = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "15.0"))
     
-    # Explicit allowed origins (wildcards prohibited when credentials enabled)
+    # Explicit allowed origins (wildcards strictly prohibited)
     _env_origins = os.getenv("ALLOWED_ORIGINS", "")
-    ALLOWED_ORIGINS: List[str] = [
-        origin.strip() for origin in _env_origins.split(",") if origin.strip()
-    ] if _env_origins else [
+    _parsed = [o.strip() for o in _env_origins.split(",") if o.strip() and o.strip() != "*"] if _env_origins else []
+    ALLOWED_ORIGINS: List[str] = _parsed if _parsed else [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:4173",
@@ -48,6 +47,6 @@ class Settings:
         "https://saathishield-ai.vercel.app",
         "https://saathishield-ai.netlify.app",
     ]
-    ALLOW_CREDENTIALS: bool = "*" not in ALLOWED_ORIGINS
+    ALLOW_CREDENTIALS: bool = True
 
 settings = Settings()

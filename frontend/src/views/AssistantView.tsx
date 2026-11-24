@@ -351,6 +351,25 @@ export const AssistantView: React.FC<AssistantViewProps> = ({ language }) => {
                       {copiedId === m.id ? (language === 'hi' ? "कॉपी हो गया" : "Copied") : (language === 'hi' ? "कॉपी करें" : "Copy")}
                     </button>
 
+                    {/* Retrieval Evidence Relevance */}
+                    {m.retrievalRelevance !== undefined && m.retrievalRelevance > 0 && (
+                      <span
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.2rem',
+                          background: 'rgba(23, 63, 53, 0.05)',
+                          padding: '0.1rem 0.35rem',
+                          borderRadius: '3px',
+                          border: '1px solid var(--color-border-subtle)',
+                          fontSize: '0.7rem'
+                        }}
+                        title="Cosine similarity relevance of retrieved regulatory knowledge"
+                      >
+                        🎯 {language === 'hi' ? "ज्ञान प्रासंगिकता" : "Relevance"}: {Math.round(m.retrievalRelevance * 100)}%
+                      </span>
+                    )}
+
                     {/* Sources list */}
                     {m.sourcesList && m.sourcesList.length > 0 ? (
                       m.sourcesList.map((s, sIdx) => (

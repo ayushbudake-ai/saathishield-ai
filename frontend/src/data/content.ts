@@ -151,7 +151,7 @@ export const SUGGESTED_PROMPTS: Record<Language, string[]> = {
 export const LEARNING_MODULES: LearningModule[] = [
   {
     id: "upi-pin-rule",
-    title: "The Golden Rule of UPI PIN",
+    title: "The Fundamental Rule of UPI PIN",
     tagline: "पैसे प्राप्त करने के लिए PIN कभी नहीं लगता",
     threatType: "UPI & QR Code Fraud",
     summary: "One of the most widespread scams in India targets sellers on OLX or recipients of fake cashback. Fraudsters exploit the misunderstanding between 'sending' and 'receiving' money.",

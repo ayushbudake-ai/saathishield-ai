@@ -302,7 +302,8 @@ export async function generateAssistantResponse(
     sourcesList: data.sources || [],
     sourceName: data.sources?.[0]?.name || "National Cyber Crime Portal (1930)",
     sourceUrl: data.sources?.[0]?.url || "https://cybercrime.gov.in",
-    confidence: data.confidence,
+    retrievalRelevance: data.retrieval_relevance ?? data.confidence,
+    confidence: data.confidence ?? data.retrieval_relevance,
     verifiedDate: "2026-11-24",
     isGrounded: true
   };
