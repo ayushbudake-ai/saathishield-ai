@@ -28,7 +28,7 @@ SaathiShield AI is designed with the sobriety and clarity of an authentic Indian
    - Multilingual conversational interface supporting **हिन्दी (Devanagari)**, **Hinglish (Roman Hindi)**, and **English**.
    - **Intent Classifier & Context Inheritance**: Accurately classifies 12 threat intents and carries conversational context across multi-turn follow-ups (e.g. "They asked me to install AnyDesk" -> "What if I already installed it on my phone?").
    - **High-Priority Emergency Triage Layer**: Immediate fast-path response with **1930 National Cyber Fraud Helpline** and **cybercrime.gov.in** escalation whenever unauthorized debits or video blackmail are reported; guides citizens to report immediately to dispatch inter-bank alerts without promising fund recovery.
-   - **Grounded Knowledge Retrieval & Defensible Evidence Scoring**: In-memory RAG grounded in 460 curated pairs and official regulatory circulars (RBI, NPCI, I4C, DoT Chakshu) with transparent official citations and relevance scores directly derived from knowledge similarity.
+   - **Grounded Knowledge Retrieval & Retrieval Relevance**: In-memory RAG grounded in 460 curated pairs and official regulatory circulars (RBI, NPCI, I4C, DoT Chakshu) with transparent official citations; computes `retrieval_relevance` derived from TF-IDF cosine similarity against verified knowledge (measuring evidence match, not calibrated probability of answer correctness).
    - **Real-Time PII & Credential Sanitizer**: Scrubs OTPs, UPI PINs, CVVs, and card numbers before logging or LLM dispatch.
    - **Configurable AI Providers**: Server-side integration supporting Google Gemini, OpenAI, or pure local grounded RAG via environment variables (`AI_PROVIDER=gemini`). Never exposes API keys in frontend code.
    - **Response Mode Attribution**: Distinct badges on every response (`⚡ Live AI Model`, `🚨 Emergency Triage`, `📖 Limited Knowledge Mode (RAG)`, `⚠️ Offline Knowledge Fallback`).
@@ -184,7 +184,7 @@ saathishield-ai/
 │   ├── prepare_adaption_enhanced.py    # Enriched dataset generator
 │   ├── generate_heldout_test.py        # 105-query benchmark generator
 │   ├── evaluate_dataset.py             # Independent rubric scoring engine
-│   ├── test_suite.py                   # 8-suite automated end-to-end QA verifier
+│   ├── test_suite.py                   # Automated end-to-end QA verifier (9 verification areas)
 │   └── test_chatbot_intelligence.py    # 36-point chatbot intelligence & safety evaluation
 ├── docs/
 │   ├── COMPETITION_REQUIREMENTS.md     # Official checklist and submission guidelines
@@ -195,7 +195,7 @@ saathishield-ai/
 │   ├── SOURCES_AND_LICENSING.md        # Statutory open access and fair use framework
 │   ├── DATASET_CARD.md                 # Full dataset card and schema
 │   ├── EVALUATION_REPORT.md            # Benchmark scoring and regression analysis
-│   ├── TEST_REPORT.md                  # Quality assurance test results (8/8 QA & 36/36 intelligence pass)
+│   ├── TEST_REPORT.md                  # Quality assurance test results (9/9 QA areas & 36/36 intelligence pass)
 │   ├── DEPLOYMENT.md                   # Local, Vercel, and Netlify deployment guide
 │   ├── LIMITATIONS.md                  # Known edge cases, non-affiliation disclaimer
 │   ├── PROGRESS_LOG.md                 # Engineering session timeline

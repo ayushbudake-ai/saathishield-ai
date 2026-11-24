@@ -75,44 +75,44 @@
 - [x] Configure `.env.example` and `.gitignore`.
 - [x] Audit external blockers (`docs/BLOCKERS.md`) and finalize competition checklist (`docs/COMPETITION_REQUIREMENTS.md`).
 
-### Phase 9: Chatbot Intelligence Overhaul & Hybrid Architecture (COMPLETED)
-- [x] Design & build decoupled Python FastAPI microservice (`backend/`):
-  - In-memory RAG retriever loading 460 dataset pairs and official citations.
+### Phase 9: Chatbot Intelligence Overhaul & Hybrid Architecture (INITIAL HISTORICAL MILESTONE)
+> **Historical Progression Note**: Phase 9 represents the initial proof-of-concept rollout of the decoupled FastAPI microservice. The initial baseline configurations introduced here (such as the initial 6s prototype timeout, baseline 25-case evaluation, and early response badges) were comprehensively overhauled, hardened, and finalized in Phases 10, 11, and 12.
+
+- [x] Initial decoupled Python FastAPI microservice architecture (`backend/`):
+  - In-memory knowledge retriever loading 460 dataset pairs and official regulatory citations.
   - Heuristic language detector (Hindi Devanagari, Hinglish Roman, English).
   - 12-category bidirectional intent detector with multi-turn context retention.
-  - Separate high-priority emergency triage layer with immediate 1930 and cybercrime.gov.in escalation.
-  - Server-side AI provider integration (Gemini / OpenAI / Grounded Fallback).
+  - Dedicated high-priority emergency triage layer with immediate 1930 and cybercrime.gov.in escalation.
+  - Configurable server-side AI provider integration (Gemini / OpenAI / Grounded local fallback).
   - Real-time PII & credential scrubbing sanitizer (zero credential storage or leaks).
-- [x] Upgrade frontend assistant engine & UI (`frontend/src/utils/engine.ts`, `AssistantView.tsx`):
-  - Async API integration with configurable 15s timeout and resilient grounded client fallback.
-  - Live response mode badges (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`).
-  - Recommended action pills and clickable dynamic follow-up chips.
-  - Clear error and retry states.
-- [x] Build automated chatbot intelligence evaluation suite (`scripts/test_chatbot_intelligence.py`):
-  - 36 / 36 test cases passed (100.0%) across direct, open-ended, multi-turn, multilingual, and safety scenarios.
-- [x] Update documentation and audit reports (`README.md`, `docs/TEST_REPORT.md`, `docs/PROGRESS_LOG.md`, `docs/DEPLOYMENT.md`).
+- [x] Initial frontend assistant engine & UI integration (`frontend/src/utils/engine.ts`, `AssistantView.tsx`):
+  - Async API integration (initially prototyped at 6s; upgraded to 15s timeout with granular HTTP error taxonomy in Phase 10).
+  - Response mode attribution badges (subsequently refined to Live AI, Emergency Triage, Limited Knowledge Mode, and Offline Fallback).
+  - Actionable guidance checklists and clickable suggested follow-up chips.
+  - Dynamic retry states without message duplication.
+- [x] Baseline chatbot intelligence test suite (`scripts/test_chatbot_intelligence.py`):
+  - Initial 25-test baseline covering direct questions, multilingual queries, and credential safety (subsequently expanded to the comprehensive 36/36 test suite in Phase 10-12).
+- [x] Initial documentation authored (`README.md`, `docs/TEST_REPORT.md`, `docs/PROGRESS_LOG.md`, `docs/DEPLOYMENT.md`).
 
-### Phase 10: Open-Ended Chatbot Intelligence & Consistency Audit (COMPLETED)
-- [x] Audit backend tracking and Git tree integrity (all 14 backend files tracked and verified in repository).
-- [x] Eliminate misleading keyword fallbacks; implemented honest Limited Knowledge Mode and transparent error reporting.
-- [x] Enhanced retrieval with TF-IDF and n-gram similarity scoring and minimum relevance threshold filtering (0.12).
-- [x] Configurable 15s timeout with granular HTTP error taxonomy (400, 429, 500, timeout, network error) and non-duplicating retry handling.
+### Phase 10: Open-Ended Chatbot Intelligence & Consistency Audit (HARDENED)
+- [x] Full Git tracking audit: confirmed all 14 backend files tracked and committed on `main`.
+- [x] Eliminated keyword fallback responses; implemented transparent Limited Knowledge Mode and error taxonomy (400, 429, 500, network disconnect, timeout).
+- [x] Upgraded retrieval with TF-IDF and n-gram similarity scoring and minimum relevance threshold filtering (0.12).
+- [x] Extended timeout to configurable 15s with dedicated retry handler preventing message duplication.
 - [x] Multi-turn Gemini conversation support with proper alternating user/model history turns and prompt isolation.
-- [x] Audited safety claims: Removed claims that fund recovery or freezing is guaranteed; maintained 1930 / cybercrime.gov.in triage; verified official sources.
-- [x] Converted all local `file:///` links across repository documentation to relative links.
-- [x] Expanded evaluation suite `scripts/test_chatbot_intelligence.py` to 36 points passing at 100.0% (36/36).
-- [x] Executed complete verification pipeline: dataset validation, held-out evaluation, QA test suite, and Vite production build.
+- [x] Audited safety claims: removed claims that fund recovery or freezing is guaranteed; enforced immediate 1930 / cybercrime.gov.in escalation.
+- [x] Cleaned all local `file:///` URLs across repository documentation into relative links.
+- [x] Expanded automated evaluation suite `scripts/test_chatbot_intelligence.py` to 36 test cases (100.0% pass rate).
 
-### Phase 11: Final Repository Audit & Hardening (COMPLETED)
+### Phase 11: Final Repository Hardening & CORS Security (HARDENED)
 - [x] CORS hardening: Eliminated wildcard `*` from production allowed origins, enforced explicit local and deployment origins (`localhost:5173`, `127.0.0.1:5173`, Vercel, Netlify), and restricted `allow_credentials` to explicit non-wildcard configurations.
-- [x] Defensible confidence scoring: Replaced arbitrary fixed confidence values (0.95, 0.90, 0.99) with genuine TF-IDF cosine relevance scores grounded in verified knowledge evidence.
-- [x] README & documentation sync: Synchronized 36-point chatbot evaluation count, updated timeout and architecture descriptions, verified clean relative links.
+- [x] Grounding relevance scoring: Replaced arbitrary fixed confidence values (0.95, 0.90, 0.99) with genuine TF-IDF cosine relevance scores grounded in verified knowledge evidence.
 - [x] Emergency safety terminology: Audited and removed all wording implying a guaranteed 2–3-hour recovery or freezing window across views, handlers, and prompt templates, reinforcing immediate 1930 and cybercrime.gov.in reporting.
-- [x] Executed full verification suite: Python backend test cases, 36/36 chatbot intelligence tests, 460-row dataset validation, and TypeScript production build.
+- [x] Synchronized test counts and architectural documentation across README and test reports.
 
-### Phase 12: Remaining Critical Fixes & Retrieval Relevance Standardization (COMPLETED)
-- [x] CORS origin sanitization: Explicitly filtered out any `*` wildcard even if supplied in environment variables, maintaining explicit origins list with enabled credentials.
-- [x] Renamed confidence to `retrieval_relevance` across backend API models, response orchestrators, emergency handlers, and frontend TypeScript interfaces; added relevance indicator in Assistant UI.
+### Phase 12: Retrieval Relevance Metric Standardization & Final Git Integrity (FINAL STATUS)
+- [x] Strict CORS origin sanitization: Filtered out `*` even from environment variable inputs, ensuring strict origin whitelisting with allowed credentials.
+- [x] Standardized metric naming: Formally renamed confidence to `retrieval_relevance` in backend models and responses, reflecting cosine similarity against verified knowledge rather than probability of answer correctness; updated frontend TypeScript interfaces and added `🎯 Relevance: X%` badge in `AssistantView.tsx`.
 - [x] Purged all remaining references to "Golden Rules" or guaranteed recovery from learning modules (`The Fundamental Rule of UPI PIN`), source registers, and UI strings.
-- [x] Verified Git tracking: confirmed all 14 files in `backend/` are tracked on main; verified zero local `file:///` URLs.
-- [x] Executed full test and verification pipeline: 36/36 chatbot intelligence tests, dataset validation, automated QA suite, and frontend build.
+- [x] Verified Git integrity: Confirmed `backend/` directory tree is tracked and visible directly in GitHub tree (`git ls-tree -r HEAD backend/`).
+- [x] Executed full verification pipeline: 36/36 chatbot intelligence tests, dataset validation, automated QA suite, and Vite production build.
