@@ -38,7 +38,7 @@ SaathiShield AI is designed with the sobriety and clarity of an authentic Indian
    - Scans for urgency coercion, APK download links, personal 10-digit senders, unverified bank claims, and shortlinks.
    - Built-in regex privacy filter that automatically redacts and warns against pasting 16-digit card numbers or OTPs.
 3. **Emergency Help & 1930 Triage (आपातकालीन सहायता)**:
-   - **Immediate Emergency Reporting**: Fast-path guidance directing victims to call 1930 or report on cybercrime.gov.in immediately so banks can log lien alerts across beneficiary accounts (recovery is never guaranteed).
+   - Report financial cyber fraud immediately through 1930 or cybercrime.gov.in. Prompt reporting may help authorities and banks take action, but fund freezing and recovery are not guaranteed.
    - Instant dialer link for the **National Cyber Fraud Helpline (1930)** and the **`cybercrime.gov.in`** portal.
    - Direct emergency directory and card-blocking SMS codes for major Indian banks (SBI, HDFC, ICICI, PNB, BoB, Axis).
 4. **Interactive Learning Center (जागरूकता केंद्र)**:
