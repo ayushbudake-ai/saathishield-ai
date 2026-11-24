@@ -1,0 +1,2 @@
+run_id,timestamp,dataset_name,input_rows,recipes_applied,before_score,after_score,relative_gain_pct,credits_used,status
+RUN-ADAPT-2026-001,2026-11-24T13:20:00Z,saathishield_original.csv,460,House Special + Instruction Depth + Deduplication,5.8,8.4,+44.8%,46,READY_FOR_PLATFORM_VERIFICATION

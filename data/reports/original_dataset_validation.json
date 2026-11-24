@@ -1,0 +1,34 @@
+{
+  "dataset_path": "data/original/saathishield_original.csv",
+  "total_records": 460,
+  "valid_records": 460,
+  "schema_valid": true,
+  "duplicate_prompts": 0,
+  "duplicate_pairs": 0,
+  "sensitive_data_leaks": 0,
+  "broken_devanagari_count": 0,
+  "empty_field_count": 0,
+  "avg_prompt_words": 21.9,
+  "avg_completion_words": 63.2,
+  "categories": {
+    "upi_payment_fraud": 135,
+    "otp_pin_security": 95,
+    "phishing_fake_kyc": 52,
+    "whatsapp_social_engineering": 49,
+    "digital_arrest_coercion": 32,
+    "remote_access_apk_trojans": 33,
+    "emergency_fraud_response": 33,
+    "general_safety_education": 31
+  },
+  "languages": {
+    "hi": 172,
+    "hi-en": 146,
+    "en": 142
+  },
+  "verification_status": {
+    "SOURCE_CHECKED": 460
+  },
+  "safety_critical_count": 405,
+  "warnings": [],
+  "errors": []
+}

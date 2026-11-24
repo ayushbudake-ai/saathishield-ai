@@ -1,0 +1,22 @@
+{
+  "run_id": "RUN-ADAPT-2026-001",
+  "dataset_name": "saathishield_original.csv",
+  "total_records": 460,
+  "platform_evaluation": {
+    "before_score": 5.8,
+    "after_score": 8.4,
+    "relative_improvement": "+44.8%",
+    "before_rating": "Moderate / Base Instruction Quality",
+    "after_rating": "Superior / Grounded Actionable Quality"
+  },
+  "recipes_selected": [
+    "Prompt Deduplication & Cleaning",
+    "House Special Instruction Enhancement",
+    "Domain Grounding & Step Expansion"
+  ],
+  "export_columns": [
+    "enhanced_prompt",
+    "enhanced_completion"
+  ],
+  "export_file": "data/adaption/saathishield_enhanced.csv"
+}

@@ -1,0 +1,461 @@
+id,category,language,difficulty,scenario_type,source_id,verification_status,safety_critical,review_notes
+SS-0001,upi_payment_fraud,hi,beginner,olx_qr_code,SRC-002,SOURCE_CHECKED,True,
+SS-0002,upi_payment_fraud,hi-en,beginner,phonepe_cashback,SRC-006,SOURCE_CHECKED,True,
+SS-0003,upi_payment_fraud,en,intermediate,wrong_transfer_scam,SRC-005,SOURCE_CHECKED,True,
+SS-0004,upi_payment_fraud,hi,intermediate,fake_payment_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0005,upi_payment_fraud,hi,beginner,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0006,upi_payment_fraud,hi,beginner,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0007,upi_payment_fraud,hi-en,beginner,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0008,upi_payment_fraud,hi-en,beginner,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0009,upi_payment_fraud,en,intermediate,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0010,upi_payment_fraud,en,intermediate,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,
+SS-0011,upi_payment_fraud,hi,beginner,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0012,upi_payment_fraud,hi,beginner,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0013,upi_payment_fraud,hi-en,beginner,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0014,upi_payment_fraud,hi-en,beginner,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0015,upi_payment_fraud,en,intermediate,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0016,upi_payment_fraud,en,intermediate,cashback_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0017,upi_payment_fraud,hi,beginner,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0018,upi_payment_fraud,hi,beginner,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0019,upi_payment_fraud,hi,beginner,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0020,upi_payment_fraud,hi-en,beginner,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0021,upi_payment_fraud,hi-en,beginner,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0022,upi_payment_fraud,en,intermediate,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0023,upi_payment_fraud,en,intermediate,accidental_credit,SRC-002,SOURCE_CHECKED,True,
+SS-0024,upi_payment_fraud,hi,beginner,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0025,upi_payment_fraud,hi,beginner,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0026,upi_payment_fraud,hi,beginner,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0027,upi_payment_fraud,hi-en,beginner,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0028,upi_payment_fraud,hi-en,beginner,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0029,upi_payment_fraud,en,intermediate,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0030,upi_payment_fraud,en,intermediate,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,
+SS-0031,upi_payment_fraud,hi,beginner,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0032,upi_payment_fraud,hi,beginner,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0033,upi_payment_fraud,hi-en,beginner,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0034,upi_payment_fraud,hi-en,beginner,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0035,upi_payment_fraud,en,intermediate,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0036,upi_payment_fraud,en,intermediate,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,
+SS-0037,upi_payment_fraud,hi,beginner,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0038,upi_payment_fraud,hi,beginner,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0039,upi_payment_fraud,hi-en,beginner,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0040,upi_payment_fraud,hi-en,beginner,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0041,upi_payment_fraud,en,intermediate,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0042,upi_payment_fraud,en,intermediate,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,
+SS-0043,upi_payment_fraud,hi,beginner,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0044,upi_payment_fraud,hi,beginner,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0045,upi_payment_fraud,hi-en,beginner,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0046,upi_payment_fraud,hi-en,beginner,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0047,upi_payment_fraud,en,intermediate,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0048,upi_payment_fraud,en,intermediate,friend_sos_money,SRC-002,SOURCE_CHECKED,True,
+SS-0049,upi_payment_fraud,hi,beginner,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0050,upi_payment_fraud,hi,beginner,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0051,upi_payment_fraud,hi-en,beginner,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0052,upi_payment_fraud,hi-en,beginner,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0053,upi_payment_fraud,en,intermediate,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0054,upi_payment_fraud,en,intermediate,electricity_refund,SRC-002,SOURCE_CHECKED,True,
+SS-0055,upi_payment_fraud,hi,beginner,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0056,upi_payment_fraud,hi,beginner,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0057,upi_payment_fraud,hi-en,beginner,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0058,upi_payment_fraud,hi-en,beginner,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0059,upi_payment_fraud,en,intermediate,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0060,upi_payment_fraud,en,intermediate,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,
+SS-0061,upi_payment_fraud,hi,beginner,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0062,upi_payment_fraud,hi,beginner,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0063,upi_payment_fraud,hi-en,beginner,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0064,upi_payment_fraud,hi-en,beginner,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0065,upi_payment_fraud,en,intermediate,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0066,upi_payment_fraud,en,intermediate,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,
+SS-0067,otp_pin_security,hi,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0068,otp_pin_security,hi,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0069,otp_pin_security,hi,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0070,otp_pin_security,hi,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0071,otp_pin_security,hi-en,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0072,otp_pin_security,hi-en,beginner,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0073,otp_pin_security,en,intermediate,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0074,otp_pin_security,en,intermediate,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0075,otp_pin_security,hi,beginner,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0076,otp_pin_security,hi,beginner,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0077,otp_pin_security,hi,beginner,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0078,otp_pin_security,hi-en,beginner,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0079,otp_pin_security,hi-en,beginner,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0080,otp_pin_security,en,intermediate,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0081,otp_pin_security,en,intermediate,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0082,otp_pin_security,hi,beginner,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0083,otp_pin_security,hi,beginner,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0084,otp_pin_security,hi-en,beginner,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0085,otp_pin_security,hi-en,beginner,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0086,otp_pin_security,en,intermediate,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0087,otp_pin_security,en,intermediate,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0088,otp_pin_security,hi,beginner,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0089,otp_pin_security,hi,beginner,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0090,otp_pin_security,hi-en,beginner,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0091,otp_pin_security,hi-en,beginner,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0092,otp_pin_security,en,intermediate,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0093,otp_pin_security,en,intermediate,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,
+SS-0094,otp_pin_security,hi,beginner,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0095,otp_pin_security,hi,beginner,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0096,otp_pin_security,hi-en,beginner,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0097,otp_pin_security,hi-en,beginner,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0098,otp_pin_security,en,intermediate,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0099,otp_pin_security,en,intermediate,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,
+SS-0100,otp_pin_security,hi,beginner,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0101,otp_pin_security,hi,beginner,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0102,otp_pin_security,hi-en,beginner,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0103,otp_pin_security,hi-en,beginner,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0104,otp_pin_security,en,intermediate,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0105,otp_pin_security,en,intermediate,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0106,otp_pin_security,hi,beginner,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0107,otp_pin_security,hi,beginner,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0108,otp_pin_security,hi-en,beginner,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0109,otp_pin_security,hi-en,beginner,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0110,otp_pin_security,en,intermediate,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0111,otp_pin_security,en,intermediate,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0112,otp_pin_security,hi,beginner,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0113,otp_pin_security,hi,beginner,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0114,otp_pin_security,hi-en,beginner,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0115,otp_pin_security,hi-en,beginner,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0116,otp_pin_security,en,intermediate,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0117,otp_pin_security,en,intermediate,courier_delivery_otp,SRC-002,SOURCE_CHECKED,True,
+SS-0118,phishing_fake_kyc,hi,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0119,phishing_fake_kyc,hi,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0120,phishing_fake_kyc,hi,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0121,phishing_fake_kyc,hi,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0122,phishing_fake_kyc,hi-en,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0123,phishing_fake_kyc,hi-en,beginner,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0124,phishing_fake_kyc,en,intermediate,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0125,phishing_fake_kyc,en,intermediate,electricity_cut_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0126,phishing_fake_kyc,hi,beginner,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0127,phishing_fake_kyc,hi,beginner,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0128,phishing_fake_kyc,hi,beginner,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0129,phishing_fake_kyc,hi-en,beginner,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0130,phishing_fake_kyc,hi-en,beginner,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0131,phishing_fake_kyc,en,intermediate,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0132,phishing_fake_kyc,en,intermediate,sbi_yono_block_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0133,phishing_fake_kyc,hi,beginner,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0134,phishing_fake_kyc,hi,beginner,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0135,phishing_fake_kyc,hi-en,beginner,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0136,phishing_fake_kyc,hi-en,beginner,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0137,phishing_fake_kyc,en,intermediate,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0138,phishing_fake_kyc,en,intermediate,pan_card_kyc_update,SRC-004,SOURCE_CHECKED,True,
+SS-0139,phishing_fake_kyc,hi,beginner,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0140,phishing_fake_kyc,hi,beginner,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0141,phishing_fake_kyc,hi-en,beginner,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0142,phishing_fake_kyc,hi-en,beginner,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0143,phishing_fake_kyc,en,intermediate,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0144,phishing_fake_kyc,en,intermediate,sim_card_5g_upgrade,SRC-004,SOURCE_CHECKED,True,
+SS-0145,phishing_fake_kyc,hi,beginner,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0146,phishing_fake_kyc,hi,beginner,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0147,phishing_fake_kyc,hi-en,beginner,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0148,phishing_fake_kyc,hi-en,beginner,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0149,phishing_fake_kyc,en,intermediate,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0150,phishing_fake_kyc,en,intermediate,income_tax_refund_link,SRC-004,SOURCE_CHECKED,True,
+SS-0151,phishing_fake_kyc,hi,beginner,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0152,phishing_fake_kyc,hi,beginner,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0153,phishing_fake_kyc,hi-en,beginner,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0154,phishing_fake_kyc,hi-en,beginner,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0155,phishing_fake_kyc,en,intermediate,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0156,phishing_fake_kyc,en,intermediate,gas_subsidy_kyc,SRC-004,SOURCE_CHECKED,False,
+SS-0157,phishing_fake_kyc,hi,beginner,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0158,phishing_fake_kyc,hi,beginner,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0159,phishing_fake_kyc,hi-en,beginner,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0160,phishing_fake_kyc,hi-en,beginner,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0161,phishing_fake_kyc,en,intermediate,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0162,phishing_fake_kyc,en,intermediate,epfo_pf_withdrawal_phish,SRC-004,SOURCE_CHECKED,True,
+SS-0163,phishing_fake_kyc,hi,beginner,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0164,phishing_fake_kyc,hi,beginner,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0165,phishing_fake_kyc,hi-en,beginner,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0166,phishing_fake_kyc,hi-en,beginner,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0167,phishing_fake_kyc,en,intermediate,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0168,phishing_fake_kyc,en,intermediate,bank_credit_limit_increase,SRC-004,SOURCE_CHECKED,True,
+SS-0169,whatsapp_social_engineering,hi,beginner,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0170,whatsapp_social_engineering,hi,beginner,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0171,whatsapp_social_engineering,hi,beginner,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0172,whatsapp_social_engineering,hi-en,beginner,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0173,whatsapp_social_engineering,hi-en,beginner,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0174,whatsapp_social_engineering,en,intermediate,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0175,whatsapp_social_engineering,en,intermediate,youtube_like_task,SRC-009,SOURCE_CHECKED,True,
+SS-0176,whatsapp_social_engineering,hi,beginner,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0177,whatsapp_social_engineering,hi,beginner,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0178,whatsapp_social_engineering,hi-en,beginner,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0179,whatsapp_social_engineering,hi-en,beginner,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0180,whatsapp_social_engineering,en,intermediate,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0181,whatsapp_social_engineering,en,intermediate,kbc_lottery_audio,SRC-009,SOURCE_CHECKED,True,
+SS-0182,whatsapp_social_engineering,hi,beginner,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0183,whatsapp_social_engineering,hi,beginner,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0184,whatsapp_social_engineering,hi-en,beginner,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0185,whatsapp_social_engineering,hi-en,beginner,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0186,whatsapp_social_engineering,en,intermediate,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0187,whatsapp_social_engineering,en,intermediate,relative_emergency_sos,SRC-009,SOURCE_CHECKED,True,
+SS-0188,whatsapp_social_engineering,hi,beginner,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0189,whatsapp_social_engineering,hi,beginner,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0190,whatsapp_social_engineering,hi-en,beginner,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0191,whatsapp_social_engineering,hi-en,beginner,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0192,whatsapp_social_engineering,en,intermediate,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0193,whatsapp_social_engineering,en,intermediate,fake_courier_customs_fee,SRC-009,SOURCE_CHECKED,True,
+SS-0194,whatsapp_social_engineering,hi,beginner,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0195,whatsapp_social_engineering,hi,beginner,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0196,whatsapp_social_engineering,hi-en,beginner,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0197,whatsapp_social_engineering,hi-en,beginner,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0198,whatsapp_social_engineering,en,intermediate,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0199,whatsapp_social_engineering,en,intermediate,matrimonial_gift_trap,SRC-009,SOURCE_CHECKED,True,
+SS-0200,whatsapp_social_engineering,hi,beginner,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0201,whatsapp_social_engineering,hi,beginner,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0202,whatsapp_social_engineering,hi-en,beginner,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0203,whatsapp_social_engineering,hi-en,beginner,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0204,whatsapp_social_engineering,en,intermediate,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0205,whatsapp_social_engineering,en,intermediate,fake_flight_ticket_agent,SRC-009,SOURCE_CHECKED,False,
+SS-0206,whatsapp_social_engineering,hi,beginner,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0207,whatsapp_social_engineering,hi,beginner,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0208,whatsapp_social_engineering,hi-en,beginner,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0209,whatsapp_social_engineering,hi-en,beginner,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0210,whatsapp_social_engineering,en,intermediate,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0211,whatsapp_social_engineering,en,intermediate,hotel_review_rating_fraud,SRC-009,SOURCE_CHECKED,True,
+SS-0212,whatsapp_social_engineering,hi,beginner,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0213,whatsapp_social_engineering,hi,beginner,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0214,whatsapp_social_engineering,hi-en,beginner,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0215,whatsapp_social_engineering,hi-en,beginner,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0216,whatsapp_social_engineering,en,intermediate,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0217,whatsapp_social_engineering,en,intermediate,wrong_number_friendship,SRC-009,SOURCE_CHECKED,True,
+SS-0218,digital_arrest_coercion,hi,beginner,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0219,digital_arrest_coercion,hi,beginner,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0220,digital_arrest_coercion,hi,beginner,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0221,digital_arrest_coercion,hi-en,beginner,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0222,digital_arrest_coercion,hi-en,beginner,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0223,digital_arrest_coercion,en,intermediate,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0224,digital_arrest_coercion,en,intermediate,cbi_police_skype_call,SRC-003,SOURCE_CHECKED,True,
+SS-0225,digital_arrest_coercion,hi,beginner,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0226,digital_arrest_coercion,hi,beginner,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0227,digital_arrest_coercion,hi-en,beginner,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0228,digital_arrest_coercion,hi-en,beginner,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0229,digital_arrest_coercion,en,intermediate,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0230,digital_arrest_coercion,en,intermediate,trai_mobile_disconnection,SRC-003,SOURCE_CHECKED,True,
+SS-0231,digital_arrest_coercion,hi,beginner,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0232,digital_arrest_coercion,hi,beginner,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0233,digital_arrest_coercion,hi-en,beginner,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0234,digital_arrest_coercion,hi-en,beginner,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0235,digital_arrest_coercion,en,intermediate,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0236,digital_arrest_coercion,en,intermediate,ed_money_laundering_arrest,SRC-003,SOURCE_CHECKED,True,
+SS-0237,digital_arrest_coercion,hi,beginner,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0238,digital_arrest_coercion,hi,beginner,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0239,digital_arrest_coercion,hi-en,beginner,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0240,digital_arrest_coercion,hi-en,beginner,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0241,digital_arrest_coercion,en,intermediate,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0242,digital_arrest_coercion,en,intermediate,supreme_court_virtual_hearing,SRC-003,SOURCE_CHECKED,True,
+SS-0243,digital_arrest_coercion,hi,beginner,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0244,digital_arrest_coercion,hi,beginner,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0245,digital_arrest_coercion,hi-en,beginner,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0246,digital_arrest_coercion,hi-en,beginner,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0247,digital_arrest_coercion,en,intermediate,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0248,digital_arrest_coercion,en,intermediate,narcotics_bureau_extortion,SRC-003,SOURCE_CHECKED,True,
+SS-0249,remote_access_apk_trojans,hi,beginner,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0250,remote_access_apk_trojans,hi,beginner,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0251,remote_access_apk_trojans,hi,beginner,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0252,remote_access_apk_trojans,hi-en,beginner,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0253,remote_access_apk_trojans,hi-en,beginner,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0254,remote_access_apk_trojans,en,intermediate,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0255,remote_access_apk_trojans,en,intermediate,wedding_invitation_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0256,remote_access_apk_trojans,hi,beginner,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0257,remote_access_apk_trojans,hi,beginner,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0258,remote_access_apk_trojans,hi,beginner,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0259,remote_access_apk_trojans,hi-en,beginner,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0260,remote_access_apk_trojans,hi-en,beginner,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0261,remote_access_apk_trojans,en,intermediate,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0262,remote_access_apk_trojans,en,intermediate,anydesk_bank_help,SRC-007,SOURCE_CHECKED,True,
+SS-0263,remote_access_apk_trojans,hi,beginner,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0264,remote_access_apk_trojans,hi,beginner,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0265,remote_access_apk_trojans,hi-en,beginner,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0266,remote_access_apk_trojans,hi-en,beginner,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0267,remote_access_apk_trojans,en,intermediate,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0268,remote_access_apk_trojans,en,intermediate,traffic_challan_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0269,remote_access_apk_trojans,hi,beginner,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0270,remote_access_apk_trojans,hi,beginner,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0271,remote_access_apk_trojans,hi-en,beginner,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0272,remote_access_apk_trojans,hi-en,beginner,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0273,remote_access_apk_trojans,en,intermediate,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0274,remote_access_apk_trojans,en,intermediate,pension_life_certificate_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0275,remote_access_apk_trojans,hi,beginner,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0276,remote_access_apk_trojans,hi,beginner,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0277,remote_access_apk_trojans,hi-en,beginner,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0278,remote_access_apk_trojans,hi-en,beginner,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0279,remote_access_apk_trojans,en,intermediate,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0280,remote_access_apk_trojans,en,intermediate,pm_kisan_subsidy_apk,SRC-007,SOURCE_CHECKED,True,
+SS-0281,emergency_fraud_response,hi,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0282,emergency_fraud_response,hi,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0283,emergency_fraud_response,hi,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0284,emergency_fraud_response,hi,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0285,emergency_fraud_response,hi-en,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0286,emergency_fraud_response,hi-en,beginner,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0287,emergency_fraud_response,en,intermediate,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0288,emergency_fraud_response,en,intermediate,money_just_debited_1930,SRC-001,SOURCE_CHECKED,True,
+SS-0289,emergency_fraud_response,hi,beginner,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0290,emergency_fraud_response,hi,beginner,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0291,emergency_fraud_response,hi-en,beginner,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0292,emergency_fraud_response,hi-en,beginner,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0293,emergency_fraud_response,en,intermediate,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0294,emergency_fraud_response,en,intermediate,card_compromised_hotlist,SRC-001,SOURCE_CHECKED,True,
+SS-0295,emergency_fraud_response,hi,beginner,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0296,emergency_fraud_response,hi,beginner,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0297,emergency_fraud_response,hi-en,beginner,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0298,emergency_fraud_response,hi-en,beginner,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0299,emergency_fraud_response,en,intermediate,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0300,emergency_fraud_response,en,intermediate,cybercrime_portal_evidence,SRC-001,SOURCE_CHECKED,True,
+SS-0301,emergency_fraud_response,hi,beginner,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0302,emergency_fraud_response,hi,beginner,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0303,emergency_fraud_response,hi-en,beginner,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0304,emergency_fraud_response,hi-en,beginner,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0305,emergency_fraud_response,en,intermediate,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0306,emergency_fraud_response,en,intermediate,bank_chargeback_timeframe,SRC-001,SOURCE_CHECKED,True,
+SS-0307,emergency_fraud_response,hi,beginner,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0308,emergency_fraud_response,hi,beginner,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0309,emergency_fraud_response,hi-en,beginner,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0310,emergency_fraud_response,hi-en,beginner,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0311,emergency_fraud_response,en,intermediate,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0312,emergency_fraud_response,en,intermediate,sim_deactivation_emergency,SRC-001,SOURCE_CHECKED,True,
+SS-0313,general_safety_education,hi,beginner,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0314,general_safety_education,hi,beginner,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0315,general_safety_education,hi,beginner,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0316,general_safety_education,hi-en,beginner,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0317,general_safety_education,hi-en,beginner,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0318,general_safety_education,en,intermediate,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0319,general_safety_education,en,intermediate,dlt_sms_headers_explained,SRC-008,SOURCE_CHECKED,False,
+SS-0320,general_safety_education,hi,beginner,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0321,general_safety_education,hi,beginner,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0322,general_safety_education,hi-en,beginner,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0323,general_safety_education,hi-en,beginner,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0324,general_safety_education,en,intermediate,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0325,general_safety_education,en,intermediate,public_wifi_banking_risk,SRC-008,SOURCE_CHECKED,False,
+SS-0326,general_safety_education,hi,beginner,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0327,general_safety_education,hi,beginner,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0328,general_safety_education,hi-en,beginner,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0329,general_safety_education,hi-en,beginner,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0330,general_safety_education,en,intermediate,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0331,general_safety_education,en,intermediate,daily_upi_limit_setting,SRC-008,SOURCE_CHECKED,False,
+SS-0332,general_safety_education,hi,beginner,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0333,general_safety_education,hi,beginner,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0334,general_safety_education,hi-en,beginner,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0335,general_safety_education,hi-en,beginner,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0336,general_safety_education,en,intermediate,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0337,general_safety_education,en,intermediate,safe_customer_care_search,SRC-008,SOURCE_CHECKED,True,
+SS-0338,general_safety_education,hi,beginner,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0339,general_safety_education,hi,beginner,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0340,general_safety_education,hi-en,beginner,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0341,general_safety_education,hi-en,beginner,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0342,general_safety_education,en,intermediate,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0343,general_safety_education,en,intermediate,biometric_aadhaar_lock,SRC-008,SOURCE_CHECKED,True,
+SS-0344,upi_payment_fraud,hi,beginner,upi_pin_concept,SRC-002,SOURCE_CHECKED,True,
+SS-0345,upi_payment_fraud,hi,beginner,olx_army_officer,SRC-002,SOURCE_CHECKED,True,
+SS-0346,upi_payment_fraud,hi-en,beginner,lottery_tax_demand,SRC-002,SOURCE_CHECKED,True,
+SS-0347,otp_pin_security,hi,intermediate,aadhaar_otp_alert,SRC-002,SOURCE_CHECKED,True,
+SS-0348,phishing_fake_kyc,hi,intermediate,sim_5g_upgrade_sms,SRC-004,SOURCE_CHECKED,True,
+SS-0349,digital_arrest_coercion,hi,advanced,trai_illegal_sim_call,SRC-003,SOURCE_CHECKED,True,
+SS-0350,emergency_fraud_response,hi,beginner,atm_stuck_card,SRC-001,SOURCE_CHECKED,True,
+SS-0351,remote_access_apk_trojans,hi-en,intermediate,fake_traffic_challan,SRC-007,SOURCE_CHECKED,True,
+SS-0352,upi_payment_fraud,hi,conversational,olx_qr_code,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0353,upi_payment_fraud,hi-en,conversational,phonepe_cashback,SRC-006,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0354,upi_payment_fraud,en,conversational,wrong_transfer_scam,SRC-005,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0355,upi_payment_fraud,hi,conversational,fake_payment_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0356,upi_payment_fraud,hi,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0357,upi_payment_fraud,hi,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0358,upi_payment_fraud,hi-en,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0359,upi_payment_fraud,hi-en,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0360,upi_payment_fraud,en,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0361,upi_payment_fraud,en,conversational,qr_collect_olx,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0362,upi_payment_fraud,hi,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0363,upi_payment_fraud,hi,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0364,upi_payment_fraud,hi-en,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0365,upi_payment_fraud,hi-en,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0366,upi_payment_fraud,en,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0367,upi_payment_fraud,en,conversational,cashback_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0368,upi_payment_fraud,hi,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0369,upi_payment_fraud,hi,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0370,upi_payment_fraud,hi,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0371,upi_payment_fraud,hi-en,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0372,upi_payment_fraud,hi-en,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0373,upi_payment_fraud,en,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0374,upi_payment_fraud,en,conversational,accidental_credit,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0375,upi_payment_fraud,hi,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0376,upi_payment_fraud,hi,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0377,upi_payment_fraud,hi,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0378,upi_payment_fraud,hi-en,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0379,upi_payment_fraud,hi-en,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0380,upi_payment_fraud,en,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0381,upi_payment_fraud,en,conversational,spoof_screenshot,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0382,upi_payment_fraud,hi,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0383,upi_payment_fraud,hi,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0384,upi_payment_fraud,hi-en,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0385,upi_payment_fraud,hi-en,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0386,upi_payment_fraud,en,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0387,upi_payment_fraud,en,conversational,auto_debit_mandate,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0388,upi_payment_fraud,hi,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0389,upi_payment_fraud,hi,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0390,upi_payment_fraud,hi-en,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0391,upi_payment_fraud,hi-en,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0392,upi_payment_fraud,en,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0393,upi_payment_fraud,en,conversational,merchant_vpa_tamper,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0394,upi_payment_fraud,hi,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0395,upi_payment_fraud,hi,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0396,upi_payment_fraud,hi-en,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0397,upi_payment_fraud,hi-en,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0398,upi_payment_fraud,en,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0399,upi_payment_fraud,en,conversational,friend_sos_money,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0400,upi_payment_fraud,hi,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0401,upi_payment_fraud,hi,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0402,upi_payment_fraud,hi-en,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0403,upi_payment_fraud,hi-en,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0404,upi_payment_fraud,en,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0405,upi_payment_fraud,en,conversational,electricity_refund,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0406,upi_payment_fraud,hi,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0407,upi_payment_fraud,hi,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0408,upi_payment_fraud,hi-en,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0409,upi_payment_fraud,hi-en,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0410,upi_payment_fraud,en,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0411,upi_payment_fraud,en,conversational,fastag_recharge_scam,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0412,upi_payment_fraud,hi,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0413,upi_payment_fraud,hi,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0414,upi_payment_fraud,hi-en,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0415,upi_payment_fraud,hi-en,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0416,upi_payment_fraud,en,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0417,upi_payment_fraud,en,conversational,soundbox_mute_fraud,SRC-002,SOURCE_CHECKED,False,Conversational rephrasing
+SS-0418,otp_pin_security,hi,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0419,otp_pin_security,hi,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0420,otp_pin_security,hi,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0421,otp_pin_security,hi,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0422,otp_pin_security,hi-en,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0423,otp_pin_security,hi-en,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0424,otp_pin_security,en,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0425,otp_pin_security,en,conversational,bank_manager_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0426,otp_pin_security,hi,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0427,otp_pin_security,hi,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0428,otp_pin_security,hi,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0429,otp_pin_security,hi-en,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0430,otp_pin_security,hi-en,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0431,otp_pin_security,en,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0432,otp_pin_security,en,conversational,credit_card_reward_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0433,otp_pin_security,hi,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0434,otp_pin_security,hi,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0435,otp_pin_security,hi-en,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0436,otp_pin_security,hi-en,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0437,otp_pin_security,en,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0438,otp_pin_security,en,conversational,sim_swap_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0439,otp_pin_security,hi,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0440,otp_pin_security,hi,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0441,otp_pin_security,hi-en,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0442,otp_pin_security,hi-en,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0443,otp_pin_security,en,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0444,otp_pin_security,en,conversational,atm_card_unblock_pin,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0445,otp_pin_security,hi,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0446,otp_pin_security,hi,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0447,otp_pin_security,hi-en,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0448,otp_pin_security,hi-en,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0449,otp_pin_security,en,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0450,otp_pin_security,en,conversational,screen_reader_otp_read,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0451,otp_pin_security,hi,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0452,otp_pin_security,hi,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0453,otp_pin_security,hi-en,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0454,otp_pin_security,hi-en,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0455,otp_pin_security,en,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0456,otp_pin_security,en,conversational,aadhaar_auth_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0457,otp_pin_security,hi,conversational,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0458,otp_pin_security,hi,conversational,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0459,otp_pin_security,hi-en,conversational,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing
+SS-0460,otp_pin_security,hi-en,conversational,pan_aadhaar_link_otp,SRC-002,SOURCE_CHECKED,True,Conversational rephrasing

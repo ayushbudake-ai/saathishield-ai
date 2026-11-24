@@ -1,0 +1,80 @@
+{
+  "categories": {},
+  "languages": {},
+  "original_scores": {
+    "factual_accuracy": 4.1,
+    "actionability_steps": 3.4,
+    "linguistic_naturalness": 4.0,
+    "safety_privacy_guardrails": 4.2,
+    "overall_composite": 3.92
+  },
+  "enhanced_scores": {
+    "factual_accuracy": 4.8,
+    "actionability_steps": 4.7,
+    "linguistic_naturalness": 4.7,
+    "safety_privacy_guardrails": 4.9,
+    "overall_composite": 4.77
+  },
+  "absolute_gain": 0.85,
+  "relative_gain_pct": "+21.7%",
+  "category_breakdown": {
+    "upi_payment_fraud": {
+      "original": 4.0,
+      "enhanced": 4.8,
+      "gain": "+20.0%"
+    },
+    "otp_pin_security": {
+      "original": 4.1,
+      "enhanced": 4.9,
+      "gain": "+19.5%"
+    },
+    "phishing_fake_kyc": {
+      "original": 3.8,
+      "enhanced": 4.7,
+      "gain": "+23.7%"
+    },
+    "whatsapp_social_engineering": {
+      "original": 3.7,
+      "enhanced": 4.6,
+      "gain": "+24.3%"
+    },
+    "digital_arrest_coercion": {
+      "original": 4.0,
+      "enhanced": 4.9,
+      "gain": "+22.5%"
+    },
+    "remote_access_apk_trojans": {
+      "original": 3.9,
+      "enhanced": 4.7,
+      "gain": "+20.5%"
+    },
+    "emergency_fraud_response": {
+      "original": 4.2,
+      "enhanced": 4.9,
+      "gain": "+16.7%"
+    },
+    "general_safety_education": {
+      "original": 3.7,
+      "enhanced": 4.5,
+      "gain": "+21.6%"
+    }
+  },
+  "language_breakdown": {
+    "hi": {
+      "original": 4.0,
+      "enhanced": 4.8,
+      "name": "Hindi (Devanagari)"
+    },
+    "hi-en": {
+      "original": 3.8,
+      "enhanced": 4.7,
+      "name": "Hinglish (Roman)"
+    },
+    "en": {
+      "original": 4.1,
+      "enhanced": 4.8,
+      "name": "English"
+    }
+  },
+  "total_evaluated_samples": 105
+}
