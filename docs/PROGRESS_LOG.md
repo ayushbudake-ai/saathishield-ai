@@ -54,4 +54,25 @@
   - Initialized local git repository, committed 70 files with structured history.
   - Connected remote origin `https://github.com/ayushbudake-ai/saathishield-ai.git`.
   - Successfully pushed `main` branch to remote repository.
-- **Status**: ALL PHASES COMPLETE & REPO LIVE ON GITHUB: `https://github.com/ayushbudake-ai/saathishield-ai`. Ready for competition submission.
+
+### 2026-11-24 — Session 2: Chatbot Intelligence Overhaul (FastAPI + RAG + Multi-turn AI)
+- **14:20 IST**: Implemented complete Python FastAPI backend (`backend/`) decoupling the conversational architecture from static frontend keywords:
+  - `backend/core/config.py`: Dynamic environment configuration for Gemini, OpenAI, and local fallback.
+  - `backend/core/security.py`: Real-time PII & credential sanitizer scrubbing OTPs, UPI PINs, CVVs, and card numbers.
+  - `backend/core/rate_limiter.py`: Sliding-window client rate limiter.
+  - `backend/services/language_detector.py`: Heuristic language classifier (Hindi Devanagari, Hinglish Roman, English).
+  - `backend/services/intent_detector.py`: 12-category bidirectional intent classifier with context inheritance.
+  - `backend/services/emergency_handler.py`: High-priority crisis triage fast-path with 1930 / cybercrime.gov.in guidance.
+  - `backend/services/retriever.py`: In-memory token-overlap RAG engine grounded on 460 dataset pairs and official source registry.
+  - `backend/services/ai_provider.py`: Configurable LLM orchestrator (Gemini / OpenAI / Grounded Synthesis).
+  - `backend/services/chat_orchestrator.py`: Full query lifecycle orchestrator generating answers, recommended actions, and suggested follow-up chips.
+  - `backend/main.py`: Production-grade API endpoints (`POST /api/chat`, `GET /api/health`).
+- **14:34 IST**: Upgraded Frontend Engine & UI (`frontend/`):
+  - `frontend/src/utils/engine.ts`: Upgraded `generateAssistantResponse` to an asynchronous function calling `POST /api/chat` with 6s timeout and resilient grounded client fallback.
+  - `frontend/src/views/AssistantView.tsx`: Integrated response mode badges (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`), recommended actions checklist pills, clickable follow-up chips, and error retry states.
+  - Verified frontend production build with `tsc -b && vite build` (passed in 8.81s).
+- **14:40 IST**: Created & Executed Automated Chatbot Intelligence Evaluation Suite (`scripts/test_chatbot_intelligence.py`):
+  - 25 / 25 test cases passed (100.0% pass rate) across Direct queries, Open-ended questions, Multi-turn follow-ups, Multilingual synthesis, and Safety/Redaction guardrails.
+- **14:42 IST**: Updated Documentation:
+  - Updated `README.md`, `docs/TEST_REPORT.md`, `docs/DEPLOYMENT.md`, `docs/LIMITATIONS.md`, and `PROJECT_PLAN.md`.
+- **Status**: Backend, frontend, test suite, and documentation complete and verified. Ready to push to GitHub.

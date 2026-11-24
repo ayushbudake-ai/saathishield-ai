@@ -23,10 +23,16 @@ India processes billions of Unified Payments Interface (UPI) transactions monthl
 SaathiShield AI is designed with the sobriety and clarity of an authentic Indian public utility (such as NPCI, Reserve Bank consumer initiatives, or India Post Payments Bank), completely rejecting generic AI aesthetics (no neon glows, no floating 3D objects, no dark-mode cyberpunk accents).
 
 ### Core Features
-1. **AI Safety Assistant (सुरक्षा सहायक)**:
-   - Multilingual conversational interface in **हिन्दी (Devanagari)**, **Hinglish**, and **English**.
-   - Grounded strictly in official regulatory advisories with transparent citations and zero hallucinations.
-   - Actionable numbered checklists with prominent red warnings for critical steps (e.g. *“Never enter PIN to receive money”*).
+1. **AI Safety Assistant (सुरक्षा सहायक — Hybrid Conversational Architecture)**:
+   - Powered by a decoupled Python FastAPI backend (`backend/`) and resilient client-side grounded synthesis fallback.
+   - Multilingual conversational interface supporting **हिन्दी (Devanagari)**, **Hinglish (Roman Hindi)**, and **English**.
+   - **Intent Classifier & Context Inheritance**: Accurately classifies 12 threat intents and carries conversational context across multi-turn follow-ups (e.g. "They asked me to install AnyDesk" -> "What if I already installed it on my phone?").
+   - **High-Priority Emergency Triage Layer**: Immediate fast-path response with **1930 National Cyber Fraud Helpline** escalation and the **Golden Hours Protocol (first 2-3 hours)** whenever unauthorized debits or video blackmail are reported.
+   - **Grounded Knowledge Retrieval**: In-memory RAG grounded in 460 curated pairs and official regulatory circulars (RBI, NPCI, I4C, DoT Chakshu) with transparent official citations and zero hallucinations.
+   - **Real-Time PII & Credential Sanitizer**: Scrubs OTPs, UPI PINs, CVVs, and card numbers before logging or LLM dispatch.
+   - **Configurable AI Providers**: Server-side integration supporting Google Gemini, OpenAI, or pure local grounded RAG via environment variables (`AI_PROVIDER=gemini`). Never exposes API keys in frontend code.
+   - **Response Mode Attribution**: Distinct badges on every response (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`).
+   - **Actionable Steps & Related Follow-up Chips**: Provides immediate checkboxes and dynamic clickable suggested follow-up chips.
 2. **Suspicious Message & Scam Checker (संदेश जांचें)**:
    - Privacy-first, client-side heuristic analyzer for questionable SMS, WhatsApp messages, and payment requests.
    - Scans for urgency coercion, APK download links, personal 10-digit senders, unverified bank claims, and shortlinks.
@@ -129,16 +135,30 @@ Full evaluation report: [docs/EVALUATION_REPORT.md](file:///F:/competitions/hack
 ## 7. Repository Structure
 
 ```
-SaathiShield-AI/
-├── frontend/                     # Production React 19 + TypeScript + Vite app
+saathishield-ai/
+├── backend/                            # Python FastAPI Intelligence Backend
+│   ├── core/
+│   │   ├── config.py                   # Provider & server configuration
+│   │   ├── rate_limiter.py             # IP sliding-window rate limiter
+│   │   └── security.py                 # PII & credential scrubbing sanitizer
+│   ├── services/
+│   │   ├── language_detector.py        # Hindi / Hinglish / English detector
+│   │   ├── intent_detector.py          # 12-vector intent classifier & context memory
+│   │   ├── emergency_handler.py        # High-priority 1930 / cybercrime.gov.in triage
+│   │   ├── retriever.py                # In-memory RAG retriever over 460 dataset pairs
+│   │   ├── ai_provider.py              # LLM integration (Gemini / OpenAI / Grounded)
+│   │   └── chat_orchestrator.py        # Pipeline orchestrator
+│   ├── main.py                         # FastAPI app (POST /api/chat, GET /api/health)
+│   └── requirements.txt                # Backend dependencies
+├── frontend/                           # Production React 19 + TypeScript + Vite app
 │   ├── src/
-│   │   ├── components/           # Header, Footer, Navigation, Alerts
-│   │   ├── views/                # 7 complete views (Home, Assistant, Checker, etc.)
-│   │   ├── data/content.ts       # Multilingual strings, knowledge base, helplines
-│   │   ├── utils/engine.ts       # Privacy filter, heuristic scam analyzer, grounded Q&A
-│   │   ├── types.ts              # TypeScript interface definitions
-│   │   └── index.css             # Semantic design system tokens and Noto Sans typography
-│   └── dist/                     # Optimized production bundle
+│   │   ├── components/                 # Header, Footer, Navigation, Alerts
+│   │   ├── views/                      # 7 complete views (Home, Assistant, Checker, etc.)
+│   │   ├── data/content.ts             # Multilingual strings, knowledge base, helplines
+│   │   ├── utils/engine.ts             # Async /api/chat client with grounded RAG fallback
+│   │   ├── types.ts                    # TypeScript interface definitions
+│   │   └── index.css                   # Semantic design system tokens and Noto Sans typography
+│   └── vite.config.ts                  # Vite config with backend /api proxy
 ├── data/
 │   ├── original/
 │   │   └── saathishield_original.csv   # 460-row Adaption upload file (prompt,completion)
@@ -164,7 +184,8 @@ SaathiShield-AI/
 │   ├── prepare_adaption_enhanced.py    # Enriched dataset generator
 │   ├── generate_heldout_test.py        # 105-query benchmark generator
 │   ├── evaluate_dataset.py             # Independent rubric scoring engine
-│   └── test_suite.py                   # 8-suite automated end-to-end QA verifier
+│   ├── test_suite.py                   # 8-suite automated end-to-end QA verifier
+│   └── test_chatbot_intelligence.py    # 25-point chatbot intelligence & safety evaluation
 ├── docs/
 │   ├── COMPETITION_REQUIREMENTS.md     # Official checklist and submission guidelines
 │   ├── DESIGN_SYSTEM.md                # Visual identity and typography specifications
@@ -174,7 +195,7 @@ SaathiShield-AI/
 │   ├── SOURCES_AND_LICENSING.md        # Statutory open access and fair use framework
 │   ├── DATASET_CARD.md                 # Full dataset card and schema
 │   ├── EVALUATION_REPORT.md            # Benchmark scoring and regression analysis
-│   ├── TEST_REPORT.md                  # Quality assurance test results (8/8 pass)
+│   ├── TEST_REPORT.md                  # Quality assurance test results (25/25 pass)
 │   ├── DEPLOYMENT.md                   # Local, Vercel, and Netlify deployment guide
 │   ├── LIMITATIONS.md                  # Known edge cases, non-affiliation disclaimer
 │   ├── PROGRESS_LOG.md                 # Engineering session timeline

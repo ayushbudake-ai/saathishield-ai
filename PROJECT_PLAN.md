@@ -74,3 +74,20 @@
 - [x] Author `docs/DEPLOYMENT.md` and `docs/LIMITATIONS.md`.
 - [x] Configure `.env.example` and `.gitignore`.
 - [x] Audit external blockers (`docs/BLOCKERS.md`) and finalize competition checklist (`docs/COMPETITION_REQUIREMENTS.md`).
+
+### Phase 9: Chatbot Intelligence Overhaul & Hybrid Architecture (COMPLETED)
+- [x] Design & build decoupled Python FastAPI microservice (`backend/`):
+  - In-memory RAG retriever loading 460 dataset pairs and official citations.
+  - Heuristic language detector (Hindi Devanagari, Hinglish Roman, English).
+  - 12-category bidirectional intent detector with multi-turn context retention.
+  - Separate high-priority emergency triage layer with 1930 and golden-hours escalation.
+  - Server-side AI provider integration (Gemini / OpenAI / Grounded Fallback).
+  - Real-time PII & credential scrubbing sanitizer (zero credential storage or leaks).
+- [x] Upgrade frontend assistant engine & UI (`frontend/src/utils/engine.ts`, `AssistantView.tsx`):
+  - Async API integration with 6s timeout and resilient grounded client fallback.
+  - Live response mode badges (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`).
+  - Recommended action pills and clickable dynamic follow-up chips.
+  - Clear error and retry states.
+- [x] Build automated chatbot intelligence evaluation suite (`scripts/test_chatbot_intelligence.py`):
+  - 25 / 25 test cases passed (100.0%) across direct, open-ended, multi-turn, multilingual, and safety scenarios.
+- [x] Update documentation and audit reports (`README.md`, `docs/TEST_REPORT.md`, `docs/PROGRESS_LOG.md`, `docs/DEPLOYMENT.md`).
