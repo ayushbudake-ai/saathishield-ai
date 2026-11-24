@@ -41,7 +41,7 @@
   - Verified production build (`tsc -b && vite build`) passed with zero errors in 2.54s.
 - **13:34 IST**: Completed Phase 7 Testing & Verification:
   - Developed and executed automated test suite `scripts/test_suite.py`.
-  - Achieved 100% pass rate (8/8 test suites passed) across production build, dataset schemas, held-out evaluation, secrets scanning, and documentation audit.
+  - Achieved 100% pass rate (8/8 baseline test suites passed in Phase 7; expanded to 9/9 suites in Phase 12).
   - Verified Hindi Devanagari typography, responsive layouts, and zero API credential leakage.
   - Authored comprehensive `docs/TEST_REPORT.md`.
 - **13:36 IST**: Completed Phase 8 Deployment & Documentation:
@@ -72,7 +72,7 @@
   - `frontend/src/views/AssistantView.tsx`: Integrated response mode badges (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`), recommended actions checklist pills, clickable follow-up chips, and error retry states.
   - Verified frontend production build with `tsc -b && vite build` (passed in 8.81s).
 - **14:40 IST**: Created & Executed Automated Chatbot Intelligence Evaluation Suite (`scripts/test_chatbot_intelligence.py`):
-  - 25 / 25 test cases passed (100.0% pass rate) across Direct queries, Open-ended questions, Multi-turn follow-ups, Multilingual synthesis, and Safety/Redaction guardrails.
+  - Historical prototype baseline: 25 / 25 test cases passed (100.0% pass rate; subsequently expanded to comprehensive 36/36 tests in Session 5–7) across Direct queries, Open-ended questions, Multi-turn follow-ups, Multilingual synthesis, and Safety/Redaction guardrails.
 - **14:42 IST**: Updated Documentation:
   - Updated `README.md`, `docs/TEST_REPORT.md`, `docs/DEPLOYMENT.md`, `docs/LIMITATIONS.md`, and `PROJECT_PLAN.md`.
 
@@ -106,7 +106,7 @@
   - Executed complete verification pipeline:
     - Dataset validation (14 checks on 460 rows: 0 errors)
     - Held-out evaluation (105 benchmark prompts: 4.77/5.00 composite score)
-    - Automated QA test suite (8/8 test suites passed)
+    - Automated QA test suite (9/9 test suites passed)
     - Chatbot intelligence test suite (36/36 tests passed)
     - Frontend TypeScript build (0 errors)
   - Committed and pushed all changes to `origin/main`.

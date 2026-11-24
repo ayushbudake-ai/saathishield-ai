@@ -26,7 +26,7 @@
 | **Held-Out Benchmark Set** | `data/evaluation/heldout_test.csv` | **COMPLETED** (105 unseen test queries) |
 | **Independent Evaluation Report** | `docs/EVALUATION_REPORT.md` | **COMPLETED** (3.92 ➔ 4.77, +38.2% on actionable steps) |
 | **Dataset Validation Pipeline** | `scripts/validate_dataset.py` | **COMPLETED** (0 duplicates, 0 leaks, UTF-8 clean) |
-| **Automated QA Verification** | `scripts/test_suite.py` & `docs/TEST_REPORT.md` | **COMPLETED** (8 / 8 test suites passed) |
+| **Automated QA Verification** | `scripts/test_suite.py` & `docs/TEST_REPORT.md` | **COMPLETED** (9 / 9 test suites passed) |
 | **Full Working Web Application** | `frontend/` (React 19 + TypeScript + Vite) | **COMPLETED** (7 views, Indian fintech aesthetic) |
 | **Production Build Assets** | `frontend/dist/index.html` | **COMPLETED** (Built with zero errors) |
 | **Deployment Guide** | `docs/DEPLOYMENT.md` | **COMPLETED** (Local, Vercel, Netlify instructions) |

@@ -65,7 +65,7 @@
 
 ### Phase 7: Testing, Quality Assurance & Verification (COMPLETED)
 - [x] Run production test suite and Vite build validation (`tsc -b && vite build` -> 0 errors in 2.54s).
-- [x] Automated QA suite `scripts/test_suite.py` executed: 8 / 8 suites passed (100% success).
+- [x] Automated QA suite `scripts/test_suite.py` executed: 9 / 9 suites passed (100% success).
 - [x] Audit cross-browser rendering, accessibility contrast, Devanagari text wrapping, and keyboard focus states.
 - [x] Generate `docs/TEST_REPORT.md`.
 
@@ -76,22 +76,25 @@
 - [x] Audit external blockers (`docs/BLOCKERS.md`) and finalize competition checklist (`docs/COMPETITION_REQUIREMENTS.md`).
 
 ### Phase 9: Chatbot Intelligence Overhaul & Hybrid Architecture (INITIAL HISTORICAL MILESTONE)
-> **Historical Progression Note**: Phase 9 represents the initial proof-of-concept rollout of the decoupled FastAPI microservice. The initial baseline configurations introduced here (such as the initial 6s prototype timeout, baseline 25-case evaluation, and early response badges) were comprehensively overhauled, hardened, and finalized in Phases 10, 11, and 12.
+> **Historical Progression Note**: Phase 9 documents the initial proof-of-concept rollout of the decoupled FastAPI microservice. The initial baseline configurations introduced during this milestone have been superseded and hardened in Phases 10, 11, and 12:
+> 1. **Emergency Triage (Historical: "Golden-Hours Escalation")**: Prototyped as "golden-hours escalation"; finalized into immediate 1930 / cybercrime.gov.in emergency triage with explicit clarification that reporting alerts inter-bank intermediaries but does not guarantee recovery or automatic fund-freezing.
+> 2. **Client Timeout (Historical: 6-Second Timeout)**: Prototyped with a 6-second timeout; upgraded in Phase 10 to a configurable 15-second timeout with granular HTTP error handling (400, 429, 500) and retry states without message duplication.
+> 3. **Chatbot Test Suite (Historical: 25/25 Tests)**: Prototyped with an initial 25/25 baseline test suite; expanded in Phases 10–12 to the comprehensive 36/36 intelligence, safety, and multilingual test suite.
 
 - [x] Initial decoupled Python FastAPI microservice architecture (`backend/`):
   - In-memory knowledge retriever loading 460 dataset pairs and official regulatory citations.
   - Heuristic language detector (Hindi Devanagari, Hinglish Roman, English).
   - 12-category bidirectional intent detector with multi-turn context retention.
-  - Dedicated high-priority emergency triage layer with immediate 1930 and cybercrime.gov.in escalation.
+  - High-priority emergency triage layer (historical: prototype golden-hours escalation; current: immediate 1930 & cybercrime.gov.in reporting without recovery promises).
   - Configurable server-side AI provider integration (Gemini / OpenAI / Grounded local fallback).
   - Real-time PII & credential scrubbing sanitizer (zero credential storage or leaks).
 - [x] Initial frontend assistant engine & UI integration (`frontend/src/utils/engine.ts`, `AssistantView.tsx`):
-  - Async API integration (initially prototyped at 6s; upgraded to 15s timeout with granular HTTP error taxonomy in Phase 10).
+  - Async API integration (historical: 6-second prototype timeout; current: hardened 15s configurable timeout with granular HTTP error taxonomy).
   - Response mode attribution badges (subsequently refined to Live AI, Emergency Triage, Limited Knowledge Mode, and Offline Fallback).
   - Actionable guidance checklists and clickable suggested follow-up chips.
   - Dynamic retry states without message duplication.
 - [x] Baseline chatbot intelligence test suite (`scripts/test_chatbot_intelligence.py`):
-  - Initial 25-test baseline covering direct questions, multilingual queries, and credential safety (subsequently expanded to the comprehensive 36/36 test suite in Phase 10-12).
+  - Baseline test evaluation (historical: 25/25 prototype test cases; current: expanded 36/36 test suite with 100% pass rate).
 - [x] Initial documentation authored (`README.md`, `docs/TEST_REPORT.md`, `docs/PROGRESS_LOG.md`, `docs/DEPLOYMENT.md`).
 
 ### Phase 10: Open-Ended Chatbot Intelligence & Consistency Audit (HARDENED)

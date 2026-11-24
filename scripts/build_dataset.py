@@ -239,7 +239,7 @@ hindi_prompt_templates = {
     ],
     "money_just_debited_1930": [
         "मेरे बैंक खाते से अभी-अभी बिना मेरी जानकारी के ₹45,000 कट गए हैं! कृपया तुरंत बताएं मुझे इस वक्त क्या करना चाहिए?",
-        "ऑनलाइन वित्तीय धोखाधड़ी होने पर 'गोल्डन ऑवर' (शुरुआती 2-3 घंटे) में पैसे बचाने के लिए सबसे पहला कदम क्या होना चाहिए?",
+        "ऑनलाइन वित्तीय धोखाधड़ी होने पर आपातकालीन स्थिति में तुरंत रिपोर्टिंग के लिए सबसे पहला कदम क्या होना चाहिए?",
         "राष्ट्रीय साइबर क्राइम हेल्पलाइन नंबर 1930 पर शिकायत दर्ज कराते समय कौन-कौन सी जानकारियां तैयार रखनी चाहिए?",
         "अगर बैंक खाते से अनधिकृत पैसे कट जाएं तो बैंक में कब तक शिकायत करने पर पूरा पैसा वापस मिल सकता है?"
     ],
@@ -282,7 +282,7 @@ hinglish_prompt_templates = {
     ],
     "money_just_debited_1930": [
         "Account se unauthorized 30,000 debit ho gaya hai just now! Please help, what should I do right now?",
-        "1930 cyber fraud helpline par complain kaise karein, aur golden hours ka kya matlab hota hai?"
+        "1930 cyber fraud helpline par turant complain kaise karein aur reporting process kya hota hai?"
     ]
 }
 
@@ -312,7 +312,7 @@ english_prompt_templates = {
         "What is the official advisory regarding 'Digital Arrest' scams by law enforcement impersonators?"
     ],
     "money_just_debited_1930": [
-        "Money was fraudulently debited from my bank account 10 minutes ago. What are the immediate emergency actions to recover it?",
+        "Money was fraudulently debited from my bank account 10 minutes ago. What are the immediate emergency actions to report it?",
         "What is the 1930 national cyber fraud helpline and how does the Citizen Financial Cyber Fraud Reporting System work?"
     ]
 }
@@ -537,11 +537,11 @@ def generate_grounded_completion(archetype, lang):
     elif archetype == "money_just_debited_1930":
         if lang == "hi":
             return (
-                "तुरंत निम्नलिखित 4 कदम उठाएं! शुरुआती 2-3 घंटे (Golden Hours) अत्यंत महत्वपूर्ण हैं:\n\n"
+                "तुरंत निम्नलिखित 4 आपातकालीन कदम उठाएं! किसी भी अनधिकृत लेन-देन की तुरंत रिपोर्टिंग आवश्यक है (कृपया ध्यान दें कि 1930 या पोर्टल पर रिपोर्ट करने से पैसा वापस मिलने की कोई गारंटी नहीं होती, लेकिन यह आवश्यक आधिकारिक प्रक्रिया है):\n\n"
                 "कदम 1: बैंक को तुरंत सूचित करें\n"
-                "अपने बैंक के आधिकारिक 24x7 हेल्पलाइन नंबर पर कॉल करके तुरंत अपने डेबिट कार्ड, नेटबैंकिंग और UPI को ब्लॉक करवाएं।\n\n"
+                "अपने बैंक के आधिकारिक 24x7 हेल्पलाइन नंबर पर कॉल करके तुरंत अपने डेबिट कार्ड, नेटबैंकिंग और UPI को ब्लॉक करवाएं ताकि आगे कोई नुकसान न हो।\n\n"
                 "कदम 2: राष्ट्रीय साइबर हेल्पलाइन 1930 पर कॉल करें\n"
-                "तुरंत 1930 डायल करें। यह भारत सरकार का 'नागरिक वित्तीय साइबर धोखाधड़ी रिपोर्टिंग सिस्टम' है। वे ठगी के पैसे को ठग के बैंक खाते में पहुंचने से पहले रास्ते में ही फ्रीज (हॉल्ट) कर देते हैं।\n\n"
+                "तुरंत 1930 डायल करें। यह भारत सरकार का 'नागरिक वित्तीय साइबर धोखाधड़ी रिपोर्टिंग सिस्टम' है, जो संबंधित बैंकों को अलर्ट भेजकर संदिग्ध लेन-देन को रोकने का प्रयास करता है।\n\n"
                 "कदम 3: आवश्यक विवरण तैयार रखें\n"
                 "1930 पर बताते समय ये तैयार रखें: आपका बैंक खाता नंबर, ठगी की रकम, ट्रांजेक्शन आईडी (UTR / Ref No), समय और जिस UPI ID या खाते में पैसे गए हैं।\n\n"
                 "कदम 4: साइबर पोर्टल पर लिखित शिकायत\n"
@@ -549,11 +549,11 @@ def generate_grounded_completion(archetype, lang):
             )
         elif lang == "hi-en":
             return (
-                "Turant ye 4 steps follow karein! First 2-3 hours (Golden Hours) me paise recover hone ke chances sabse zyada hote hain:\n\n"
+                "Turant ye 4 emergency triage steps follow karein! Unauthorized transaction ki foran reporting bohot zaroori hai (note karein ki 1930 ya cyber portal par report karne se recovery ki koi guarantee nahi hoti, par ye mandatory official process hai):\n\n"
                 "Step 1: Bank Ko Foran Block Karein\n"
                 "Apne bank ke helpline number par call karke card aur netbanking turant block karwayein taaki aur paise na katein.\n\n"
                 "Step 2: Dial 1930 Helpline\n"
-                "Turant 1930 par call karein. Ye government ka cyber fraud emergency system hai jo destination account me fund ko freeze kar deta hai.\n\n"
+                "Turant 1930 par call karein. Ye government ka Citizen Financial Cyber Fraud Reporting System hai jo intermediary banks ko alert bhejta hai taaki funds ko rokne ka prayas kiya ja sake.\n\n"
                 "Step 3: Details Ready Rakhein\n"
                 "Account number, deducted amount, Transaction ID (UTR), debit time aur beneficiary details ready rakhein.\n\n"
                 "Step 4: Formal Complaint\n"
@@ -561,11 +561,11 @@ def generate_grounded_completion(archetype, lang):
             )
         else:
             return (
-                "Execute the following 4 emergency triage steps immediately. The initial 2-3 hours ('Golden Hours') are critical to halt fund transfers:\n\n"
+                "Execute the following 4 emergency triage steps immediately. Immediate reporting of unauthorized debits is critical (please note that reporting does not guarantee recovery of funds, but initiates the official inter-bank fraud alert protocol):\n\n"
                 "1. Immediate Bank Blockade:\n"
-                "Call your bank's 24x7 emergency helpline immediately to freeze your debit card, UPI handles, and internet banking credentials.\n\n"
+                "Call your bank's 24x7 emergency helpline immediately to freeze your debit card, UPI handles, and internet banking credentials to prevent further losses.\n\n"
                 "2. Dial National Cyber Fraud Helpline (1930):\n"
-                "Dial 1930 immediately. Operated by I4C/MHA, this system connects directly with member banks and payment intermediaries to freeze the stolen funds along the transaction chain before withdrawal.\n\n"
+                "Dial 1930 immediately. Operated by I4C/MHA, this Citizen Financial Cyber Fraud Reporting System alerts member banks and payment intermediaries to track and attempt to halt suspicious transactions along the payment chain.\n\n"
                 "3. Provide Key Transaction Parameters:\n"
                 "Have your account number, transaction reference number (UTR/Ref ID), exact timestamp, debit amount, and recipient UPI ID or account number ready.\n\n"
                 "4. Formal Portal Filing & Bank Representation:\n"

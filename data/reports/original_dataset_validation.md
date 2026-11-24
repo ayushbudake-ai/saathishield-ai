@@ -17,7 +17,7 @@
 | **Sensitive Data / PII Leaks** | 0 | PASS |
 | **Broken Unicode / Devanagari** | 0 | PASS |
 | **Average Prompt Length** | 21.9 words | OPTIMAL |
-| **Average Completion Length** | 63.2 words | INFORMATIVE |
+| **Average Completion Length** | 63.7 words | INFORMATIVE |
 | **Safety-Critical Scenarios** | 405 (88.0%) | VERIFIED |
 
 ---

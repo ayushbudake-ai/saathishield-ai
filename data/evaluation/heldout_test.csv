@@ -26,7 +26,7 @@ HO-024,phishing_fake_kyc,en,"I received an SMS claiming an Income Tax refund of 
 HO-025,whatsapp_social_engineering,en,"A foreign courier service is claiming a gift package from the UK is held at Delhi airport customs and demanding clearance fees of Rs 35,000. What is this?",True
 HO-026,digital_arrest_coercion,en,Can a state police officer or ED investigator legally order a citizen to remain inside their room under 'Digital Arrest' via a Skype video call?,True
 HO-027,remote_access_apk_trojans,en,What happens if someone accidentally installs an unknown APK file on their Android phone sent via WhatsApp?,True
-HO-028,emergency_fraud_response,en,What is the exact official procedure to report financial cyber fraud within the first 2 hours in India?,True
+HO-028,emergency_fraud_response,en,What is the exact official procedure to report financial cyber fraud immediately in India?,True
 HO-029,general_safety_education,en,What is the mAadhaar biometric lock feature and how does it prevent AePS (Aadhaar Enabled Payment System) withdrawal fraud?,False
 HO-030,upi_payment_fraud,en,How can I verify if a merchant UPI QR code at a retail shop has been tampered with or replaced by fraudsters?,False
 HO-031,upi_payment_fraud,hi,"फेसबुक पर मोबाइल खरीदने के लिए विक्रेता ने कहा कि आधा पैसा पहले QR कोड पर भेजो, क्या डिलीवरी से पहले पैसे भेजना सुरक्षित है?",True

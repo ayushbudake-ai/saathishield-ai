@@ -9,7 +9,7 @@
   "broken_devanagari_count": 0,
   "empty_field_count": 0,
   "avg_prompt_words": 21.9,
-  "avg_completion_words": 63.2,
+  "avg_completion_words": 63.7,
   "categories": {
     "upi_payment_fraud": 135,
     "otp_pin_security": 95,
