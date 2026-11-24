@@ -1,15 +1,32 @@
 import os
 import csv
 import re
-from typing import List, Dict, Any
+import math
+from collections import Counter
+from typing import List, Dict, Any, Tuple
+
+def tokenize(text: str) -> List[str]:
+    """Tokenizes text into words and 2-grams across Latin and Devanagari scripts."""
+    if not text:
+        return []
+    # Extract alphanumeric and Devanagari Unicode sequences
+    words = [w.lower() for w in re.findall(r'[\w\u0900-\u097F]+', text)]
+    # Filter very short tokens
+    unigrams = [w for w in words if len(w) > 1]
+    # Add bigrams for compound phrases
+    bigrams = [f"{words[i]}_{words[i+1]}" for i in range(len(words)-1) if len(words[i]) > 1 and len(words[i+1]) > 1]
+    return unigrams + bigrams
 
 class KnowledgeRetriever:
     def __init__(self, data_dir: str = "data"):
         self.data_dir = data_dir
         self.knowledge_items: List[Dict[str, Any]] = []
         self.sources: Dict[str, Dict[str, str]] = {}
+        self.doc_freq: Counter = Counter()
+        self.total_docs: int = 0
         self.load_sources()
         self.load_datasets()
+        self.compute_idf()
 
     def load_sources(self):
         src_path = os.path.join(self.data_dir, "source_register.csv")
@@ -53,20 +70,23 @@ class KnowledgeRetriever:
             orig_p = orig_rows[i]["prompt"] if i < len(orig_rows) else ""
             orig_c = orig_rows[i]["completion"] if i < len(orig_rows) else ""
             
-            # Prefer enhanced completion if available
             enh_p = enh_rows[i].get("enhanced_prompt", orig_p) if i < len(enh_rows) else orig_p
             enh_c = enh_rows[i].get("enhanced_completion", orig_c) if i < len(enh_rows) else orig_c
 
             src_id = meta.get("source_id", "SRC-001")
             src_info = self.sources.get(src_id, {
-                "name": "National Cyber Crime Reporting Portal",
+                "name": "National Cyber Crime Reporting Portal (MHA)",
                 "url": "https://cybercrime.gov.in",
-                "authority": "Ministry of Home Affairs"
+                "authority": "Ministry of Home Affairs / I4C"
             })
 
-            # Tokenize for quick lexical search
-            all_text = f"{enh_p} {enh_c} {meta.get('category', '')} {meta.get('scenario_type', '')}"
-            tokens = set(re.findall(r'\w+', all_text.lower()))
+            # Emphasize prompt tokens over completion tokens for retrieval relevance
+            prompt_tokens = tokenize(enh_p)
+            completion_tokens = tokenize(enh_c[:300]) # take initial summary
+            category_tokens = tokenize(meta.get("category", ""))
+
+            all_tokens = prompt_tokens * 3 + category_tokens * 2 + completion_tokens
+            token_counts = Counter(all_tokens)
 
             self.knowledge_items.append({
                 "id": meta.get("id", f"KB-{i+1:04d}"),
@@ -75,41 +95,91 @@ class KnowledgeRetriever:
                 "prompt": enh_p,
                 "completion": enh_c,
                 "base_completion": orig_c,
-                "tokens": tokens,
+                "token_counts": token_counts,
+                "prompt_tokens_set": set(prompt_tokens),
                 "source": src_info,
                 "safety_critical": meta.get("safety_critical", "True") == "True"
             })
 
-    def retrieve(self, query: str, detected_intent: str = None, top_k: int = 2) -> List[Dict[str, Any]]:
+        self.total_docs = len(self.knowledge_items)
+
+    def compute_idf(self):
+        """Computes Inverse Document Frequency (IDF) across all knowledge items."""
+        for item in self.knowledge_items:
+            unique_tokens = set(item["token_counts"].keys())
+            for t in unique_tokens:
+                self.doc_freq[t] += 1
+
+        self.idf = {}
+        for token, count in self.doc_freq.items():
+            # Standard smoothed IDF
+            self.idf[token] = math.log((self.total_docs + 1) / (count + 1)) + 1.0
+
+    def retrieve(
+        self,
+        query: str,
+        detected_intent: str = None,
+        top_k: int = 2,
+        min_relevance_threshold: float = 0.12
+    ) -> List[Dict[str, Any]]:
         """
-        Retrieves top_k most relevant verified knowledge pairs based on token overlap & category alignment.
+        Retrieves top_k relevant verified knowledge items using TF-IDF cosine similarity.
+        Returns empty list if the query has low similarity to avoid returning unrelated documents.
         """
         if not query or not self.knowledge_items:
             return []
 
-        query_tokens = set(re.findall(r'\w+', query.lower()))
-        scored = []
+        query_tokens = tokenize(query)
+        if not query_tokens:
+            return []
+
+        query_counts = Counter(query_tokens)
+        query_vec = {}
+        query_norm_sq = 0.0
+
+        for t, count in query_counts.items():
+            weight = count * self.idf.get(t, 1.0)
+            query_vec[t] = weight
+            query_norm_sq += weight ** 2
+
+        query_norm = math.sqrt(query_norm_sq)
+        if query_norm == 0:
+            return []
+
+        scored: List[Tuple[float, Dict[str, Any]]] = []
 
         for item in self.knowledge_items:
-            overlap = len(query_tokens.intersection(item["tokens"]))
-            score = overlap
+            dot_product = 0.0
+            doc_norm_sq = 0.0
+            item_counts = item["token_counts"]
 
-            # Category boost if intent aligns
-            if detected_intent and item["category"] in detected_intent:
-                score += 3
+            for t, count in item_counts.items():
+                w = count * self.idf.get(t, 1.0)
+                doc_norm_sq += w ** 2
+                if t in query_vec:
+                    dot_product += query_vec[t] * w
 
-            # Exact keyword phrase boosts
-            if any(k in query.lower() for k in ["qr", "pin", "पिन", "कलेक्ट"]) and item["category"] == "upi_payment_fraud":
-                score += 4
-            if any(k in query.lower() for k in ["बिजली", "electricity", "bill", "yono", "kyc"]) and item["category"] == "phishing_fake_kyc":
-                score += 4
-            if any(k in query.lower() for k in ["digital arrest", "डिजिटल अरेस्ट", "police", "cbi"]) and item["category"] == "digital_arrest_coercion":
-                score += 4
-            if any(k in query.lower() for k in ["apk", "anydesk", "teamviewer"]) and item["category"] == "remote_access_apk_trojans":
-                score += 4
+            doc_norm = math.sqrt(doc_norm_sq)
+            if doc_norm == 0:
+                continue
 
-            if score > 0:
-                scored.append((score, item))
+            cosine_sim = dot_product / (query_norm * doc_norm)
+
+            # Intent-category alignment boost (only if there is baseline similarity)
+            if cosine_sim > 0.05 and detected_intent:
+                clean_cat = item["category"].replace("_", "")
+                clean_intent = detected_intent.replace("_", "")
+                if clean_cat in clean_intent or clean_intent in clean_cat:
+                    cosine_sim *= 1.25
+
+            # Scaled relevance score (bounded [0.0, 1.0])
+            relevance_score = min(1.0, round(cosine_sim, 3))
+
+            if relevance_score >= min_relevance_threshold:
+                # Attach relevance score to item copy
+                item_copy = dict(item)
+                item_copy["relevance_score"] = relevance_score
+                scored.append((relevance_score, item_copy))
 
         scored.sort(key=lambda x: x[0], reverse=True)
         return [item for _, item in scored[:top_k]]

@@ -75,4 +75,25 @@
   - 25 / 25 test cases passed (100.0% pass rate) across Direct queries, Open-ended questions, Multi-turn follow-ups, Multilingual synthesis, and Safety/Redaction guardrails.
 - **14:42 IST**: Updated Documentation:
   - Updated `README.md`, `docs/TEST_REPORT.md`, `docs/DEPLOYMENT.md`, `docs/LIMITATIONS.md`, and `PROJECT_PLAN.md`.
-- **Status**: Backend, frontend, test suite, and documentation complete and verified. Ready to push to GitHub.
+
+### 2026-11-24 — Session 3: Phase 2 Fix Open-Ended Chatbot Intelligence
+- **14:55 IST**: Replaced Hardcoded Keyword Fallback:
+  - Completely excised 400 lines of static keyword-matching responses in `frontend/src/utils/engine.ts`.
+  - Implemented typed `ChatApiError` handling 429 (Rate Limit), 400 (Bad Request), 500 (Internal Server Error), Timeout (15s abort controller), and Network Disconnection.
+  - Replaced misleading fixed 0.95 confidence score with dynamic retrieval relevance / model confidence scores.
+  - Never claims "100% fake" based on substring keywords alone.
+- **15:00 IST**: Re-architected Semantic Retriever (`backend/services/retriever.py`):
+  - Built TF-IDF and 2-gram similarity retriever across all 460 dataset items with document frequency weighting and normalized cosine similarity.
+  - Enforced a minimum relevance threshold (`0.12`) to prevent returning unrelated documents.
+  - Return honest confidence scores and source attributions.
+- **15:05 IST**: Enhanced Multi-Turn Context & Emergency Safety:
+  - Implemented Gemini alternating turn builder in `backend/services/ai_provider.py` ensuring no duplicate user messages or consecutive role violations.
+  - Verified exact 4-turn stateful scenario: *"Called from bank"* ➔ *"Asked to install AnyDesk"* ➔ *"What if already installed?"* ➔ *"Can they access my UPI now?"*.
+  - Verified 5 emergency fast-path triggers (transferred money, debited without permission, shared OTP with caller, controlling phone, threatening video call).
+- **15:07 IST**: Upgraded Frontend Error State & Honest Attribution:
+  - Updated `AssistantView.tsx` with dedicated retry handler that does not duplicate the user message on retry.
+  - Updated `renderModeBadge` to distinguish `⚡ Live AI Model`, `🚨 EMERGENCY TRIAGE (1930)`, `📖 Limited Knowledge Mode (RAG)`, and `⚠️ Offline Knowledge Fallback`.
+  - Updated `backend/main.py` health endpoint to accurately report live credentials and operating mode.
+- **15:08 IST**: Executed 36-Point Automated Evaluation Suite (`scripts/test_chatbot_intelligence.py`):
+  - 36 / 36 tests passed (100.0% success rate) covering all 8 required open-ended questions, multi-turn sequence, 5 emergency triggers, 9 multilingual queries, and safety guardrails.
+- **Status**: Phase 2 open-ended intelligence fix complete and verified. Ready to push to GitHub.

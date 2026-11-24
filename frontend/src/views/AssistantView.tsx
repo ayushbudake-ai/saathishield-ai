@@ -69,18 +69,31 @@ export const AssistantView: React.FC<AssistantViewProps> = ({ language }) => {
     try {
       const resp = await generateAssistantResponse(query, language, currentHistory);
       setMessages((prev) => [...prev, resp]);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Chat error:", err);
-      setLastError(language === 'hi' ? "संदेश भेजने में त्रुटि हुई। कृपया पुनः प्रयास करें।" : "Failed to process message. Please retry.");
+      setLastError(err.message || (language === 'hi' ? "संदेश भेजने में त्रुटि हुई। कृपया पुनः प्रयास करें।" : "Failed to process message. Please retry."));
       setLastFailedPrompt(query);
     } finally {
       setIsTyping(false);
     }
   };
 
-  const handleRetry = () => {
-    if (lastFailedPrompt) {
-      handleSend(lastFailedPrompt);
+  const handleRetry = async () => {
+    if (!lastFailedPrompt) return;
+    const query = lastFailedPrompt;
+    setLastError(null);
+    setIsTyping(true);
+
+    try {
+      // Re-invoke using current conversation messages without duplicating the user message in history
+      const resp = await generateAssistantResponse(query, language, messages);
+      setMessages((prev) => [...prev, resp]);
+      setLastFailedPrompt(null);
+    } catch (err: any) {
+      console.error("Chat retry error:", err);
+      setLastError(err.message || (language === 'hi' ? "पुनः प्रयास विफल रहा। कृपया पुनः प्रयास करें।" : "Retry failed. Please try again."));
+    } finally {
+      setIsTyping(false);
     }
   };
 
@@ -148,6 +161,25 @@ export const AssistantView: React.FC<AssistantViewProps> = ({ language }) => {
       );
     }
 
+    if (mode === 'offline_fallback') {
+      return (
+        <span style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.25rem',
+          fontSize: '0.7rem',
+          fontWeight: 600,
+          background: 'rgba(180, 107, 24, 0.1)',
+          color: '#B46B18',
+          border: '1px solid rgba(180, 107, 24, 0.3)',
+          borderRadius: '4px',
+          padding: '0.125rem 0.375rem'
+        }}>
+          ⚠️ {language === 'hi' ? "ऑफलाइन सुरक्षा बैकअप" : "Offline Knowledge Mode"}
+        </span>
+      );
+    }
+
     return (
       <span style={{
         display: 'inline-flex',
@@ -161,7 +193,7 @@ export const AssistantView: React.FC<AssistantViewProps> = ({ language }) => {
         borderRadius: '4px',
         padding: '0.125rem 0.375rem'
       }}>
-        🛡️ {language === 'hi' ? "सत्यापित ज्ञानकोश (RAG)" : "Verified Knowledge (RAG)"}
+        📖 {language === 'hi' ? "सीमित ज्ञानकोश (RAG)" : "Limited Knowledge (RAG)"}
       </span>
     );
   };

@@ -11,8 +11,8 @@
 
 | Test Area | Target Spec | Result | Status |
 |---|---|---|---|
-| **Production Frontend Build** | `tsc -b && vite build` bundle output | `frontend/dist/index.html` (363 kB gzip: 105 kB) | **PASS** |
-| **Chatbot Intelligence & Safety Suite** | `scripts/test_chatbot_intelligence.py` | 25 / 25 test cases passed (100.0%) | **PASS** |
+| **Production Frontend Build** | `tsc -b && vite build` bundle output | `frontend/dist/index.html` (343 kB gzip: 100 kB) | **PASS** |
+| **Chatbot Intelligence & Safety Suite (Phase 2)** | `scripts/test_chatbot_intelligence.py` | 36 / 36 test cases passed (100.0%) | **PASS** |
 | **Original Dataset Schema** | Exactly `prompt,completion` UTF-8 | 460 clean records verified | **PASS** |
 | **Enhanced Dataset Schema** | `enhanced_prompt,enhanced_completion` | 460 enriched records verified | **PASS** |
 | **Held-Out Test Set** | 100+ unseen prompts across categories | 105 distinct test queries | **PASS** |
@@ -23,39 +23,52 @@
 
 ---
 
-## 2. Chatbot Intelligence Overhaul Evaluation (25 / 25 Passed)
+## 2. Phase 2 Chatbot Intelligence & Open-Ended Evaluation (36 / 36 Passed)
 
-The upgraded multilingual cybersecurity assistant was evaluated with automated verification (`scripts/test_chatbot_intelligence.py`) covering 5 distinct quality domains:
+The upgraded multilingual cybersecurity assistant was audited and evaluated with automated verification (`scripts/test_chatbot_intelligence.py`) covering 6 distinct quality domains:
 
-### A. Direct Vector Triage (6/6 Passed)
-- **UPI PIN Safety**: Verifies that requests for UPI PIN to receive money are unequivocally rejected.
+### A. Direct Scam Vector Triage (6/6 Passed)
+- **UPI PIN Safety**: Rejects requests for UPI PIN to receive money.
 - **QR Code Scams**: Affirms QR codes are solely for paying/debits, never for receiving rewards.
-- **Fake KYC SMS**: Identifies 10-digit mobile sender deception and directs to verified utility channels.
+- **Fake KYC Disconnection SMS**: Identifies 10-digit mobile sender deception and directs to verified utility channels.
 - **Digital Arrest Extortion**: Affirms zero statutory basis for video-call arrest under Indian law.
 - **Malicious APK Trojans**: Warns against sideloaded APKs (`.apk`, `sbi_rewards.apk`) and recommends official app stores.
 - **Unauthorized Debit**: Escalates to emergency priority triage, advising 1930 and golden hour containment.
 
-### B. Open-Ended Real-World Questions (4/4 Passed)
-- **Elderly Assistance**: Practical, empathetic safety guidance without technical jargon.
-- **Social Engineering Tactics**: Clarifies psychological triggers (urgency, panic, fear, authority impersonation).
-- **Account Blocked Panic**: Clear verification steps via official branches or verified mobile apps.
-- **Scam Uncertainty**: Reassuring containment audit steps when users suspect prior exposure.
+### B. Required 8 Open-Ended Questions (8/8 Passed)
+- **1. Protecting Elderly Uncle From Suspicious Calls**: Empathetic, jargon-free protection advice for family members.
+- **2. Why Scammers Create Urgency**: Clear explanation of psychological triggers (panic, fear, artificial countdowns).
+- **3. Verifying Bank Account Block Warning Without Panic**: Safe authentication steps via branch or mobile banking.
+- **4. Clicked Link But Entered Nothing Containment**: Practical containment steps (browser cache clearing, APK check, antivirus scan).
+- **5. Remote Access via Normal Phone Call Inquiry**: Factually clarifies that normal voice calls cannot directly grant phone remote control without user-installed apps or OTP disclosure.
+- **6. Teaching Parents to Identify Fake UPI Requests**: Actionable rules for parents regarding Collect Requests and QR codes.
+- **7. Screen Sharing During Bank Call Safety Inquiry**: Unambiguous warning against sharing screens or installing AnyDesk with bank callers.
+- **8. Difference Between UPI ID and UPI PIN**: Clear pedagogical explanation distinguishing receiving address (UPI ID) from payment authorization password (UPI PIN).
 
-### C. Multi-Turn Context Retention (2/2 Passed)
-- Demonstrates stateful context retention:
-  - Turn 1: "Someone called me saying they are from SBI."
-  - Turn 2: "They asked me to install an application called AnyDesk." (Assistant identifies remote screen-sharing risks).
-  - Turn 3: "What if I already installed it on my phone?" (Assistant retains "it" as AnyDesk and provides immediate Airplane Mode, app force stop, and secondary phone bank notifications).
+### C. Multi-Turn Context Retention (4/4 Passed)
+- Evaluates the exact stateful 4-turn conversation sequence without requiring the user to repeat the full story:
+  - Turn 1: *"Someone called me claiming to be from my bank."* ➔ Explains safe verification protocol.
+  - Turn 2: *"They asked me to install AnyDesk."* ➔ Understands caller context and explains remote screen-sharing risks.
+  - Turn 3: *"What if I already installed it?"* ➔ Delivers immediate Airplane Mode and containment guidance.
+  - Turn 4: *"Can they access my UPI now?"* ➔ Continues same scenario, detailing screen-reading risks and bank alert steps.
 
-### D. Multilingual Natural Language Synthesis (9/9 Passed)
+### D. 5 Active Emergency Triage Cases (5/5 Passed)
+- Fast-path immediate prioritization directing victims to **1930** and **cybercrime.gov.in**:
+  - Case 1: *"I just transferred money to a scammer."*
+  - Case 2: *"Someone has debited money without permission."*
+  - Case 3: *"I shared my OTP with a caller."*
+  - Case 4: *"Someone is controlling my phone."*
+  - Case 5: *"Someone is threatening me on a video call."*
+
+### E. Multilingual Natural Language Synthesis (9/9 Passed)
 - Verified across **Hindi (Devanagari)**, **Hinglish (Roman Hindi)**, and **English**.
-- No robotic word-for-word translation; natural colloquial phrasing suited for Indian banking consumers.
+- Eliminates translation artifacts, using natural conversational idioms (*पैसे कट गए*, *खाता ब्लॉक*, *चक्षु पोर्टल*).
 
-### E. Safety, PII Redaction & Guardrails (4/4 Passed)
-- **Zero Credential Retention**: Automated PII sanitizer scrubs OTPs, UPI PINs, CVVs, and card numbers.
-- **Emergency 1930 Fast-Path**: Instant prioritization with dialer links and golden-hour freeze advice.
-- **No Fabricated Citations**: Zero hallucinated circulars or non-existent police provisions.
-- **Jailbreak Resistance**: Deflects malicious penetration testing or hacking prompts to educational standards.
+### F. Safety Guardrails, Redaction & Edge Cases (4/4 Passed)
+- **Zero Credential Retention**: Automated PII sanitizer scrubs OTPs, UPI PINs, CVVs, and card numbers before logging or LLM transmission.
+- **Honest Limited Knowledge Mode**: Out-of-domain queries in offline/retrieval mode honestly state that no verified record exists instead of inventing answers.
+- **Zero Hallucinated Regulatory Citations**: Refuses to endorse non-existent circular numbers.
+- **Jailbreak Deflection**: Malicious penetration testing prompts are redirected to educational safety standards.
 
 ---
 

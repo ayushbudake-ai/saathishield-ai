@@ -11,37 +11,76 @@ def generate_followup_suggestions(intent: str, lang: str) -> List[str]:
     """Generates context-aware follow-up suggestion chips."""
     if lang == "hi":
         if "remote_access" in intent or "apk" in intent or "device" in intent:
-            return ["क्या अनजान APK से फोन हैक हो सकता है?", "AnyDesk ऐप से पैसे कैसे चोरी होते हैं?"]
+            return ["क्या अनजान APK से फोन हैक हो सकता है?", "AnyDesk ऐप से पैसे कैसे चोरी होते हैं?", "क्या फोन को फैक्ट्री रीसेट करना चाहिए?"]
         elif "upi" in intent or "pin" in intent:
-            return ["क्या QR कोड स्कैन करने से पैसे कटते हैं?", "गलती से भेजे पैसे कैसे वापस लाएं?"]
+            return ["क्या QR कोड स्कैन करने से पैसे कटते हैं?", "UPI ID और UPI PIN में क्या अंतर है?", "गलती से भेजे पैसे कैसे वापस लाएं?"]
         elif "phishing" in intent or "kyc" in intent:
-            return ["असली बैंक SMS की पहचान कैसे करें?", "बिजली बिल फ्रॉड की शिकायत कहाँ करें?"]
+            return ["असली बैंक SMS की पहचान कैसे करें?", "बिजली बिल फ्रॉड की शिकायत कहाँ करें?", "Chakshu पोर्टल पर रिपोर्ट कैसे करें?"]
         elif "digital_arrest" in intent:
-            return ["क्या पुलिस वीडियो कॉल पर अरेस्ट कर सकती है?", "नकली कोर्ट नोटिस की पहचान कैसे करें?"]
+            return ["क्या पुलिस वीडियो कॉल पर अरेस्ट कर सकती है?", "नकली कोर्ट नोटिस की पहचान कैसे करें?", "1930 पर तुरंत शिकायत कैसे करें?"]
         else:
-            return ["साइबर हेल्पलाइन 1930 कैसे काम करती है?", "Aadhaar बायोमेट्रिक लॉक कैसे करें?"]
+            return ["साइबर हेल्पलाइन 1930 कैसे काम करती है?", "Aadhaar बायोमेट्रिक लॉक कैसे करें?", "बैंक में शिकायत दर्ज करने की समय-सीमा क्या है?"]
     elif lang == "hi-en":
         if "remote_access" in intent or "apk" in intent or "device" in intent:
-            return ["Can APK malware read bank OTPs?", "What to do if already installed?"]
+            return ["Can APK malware read bank OTPs?", "What to do if already installed?", "Can they access my UPI account now?"]
         elif "upi" in intent or "pin" in intent:
-            return ["Can money be deducted just by QR scan?", "What is wrong transfer scam?"]
+            return ["Can money be deducted just by QR scan?", "What is the difference between UPI ID and PIN?", "What is wrong transfer scam?"]
         elif "phishing" in intent or "kyc" in intent:
-            return ["How to identify fake bank SMS headers?", "How to report on Chakshu portal?"]
+            return ["How to identify fake bank SMS headers?", "How to report on Chakshu portal?", "What if I clicked the link?"]
         elif "digital_arrest" in intent:
-            return ["Can police arrest on Skype video call?", "What is an RBI verification account?"]
+            return ["Can police arrest on Skype video call?", "What is an RBI verification account?", "How to verify genuine police summons?"]
         else:
-            return ["How does 1930 helpline freeze money?", "How to lock Aadhaar biometric?"]
+            return ["How does 1930 helpline freeze money?", "How to lock Aadhaar biometric?", "What is the golden hour window?"]
     else:
         if "remote_access" in intent or "apk" in intent or "device" in intent:
-            return ["How do APK trojans intercept SMS OTPs?", "How to audit Android Device Admin permissions?"]
+            return ["How do APK trojans intercept SMS OTPs?", "How to audit Android Device Admin permissions?", "Can they access my UPI now?"]
         elif "upi" in intent or "pin" in intent:
-            return ["Do I ever need a PIN to receive funds?", "How do UPI collect requests work?"]
+            return ["Do I ever need a PIN to receive funds?", "What is the difference between UPI ID and UPI PIN?", "How do UPI collect requests work?"]
         elif "phishing" in intent or "kyc" in intent:
-            return ["What are TRAI approved SMS headers?", "How to report phishing on Chakshu?"]
+            return ["What are TRAI approved SMS headers?", "How to report phishing on Chakshu?", "What if I clicked a suspicious link?"]
         elif "digital_arrest" in intent:
-            return ["Can Indian police arrest via Skype call?", "What is the legal arrest procedure?"]
+            return ["Can Indian police arrest via Skype call?", "What is the legal arrest procedure?", "How to identify synthetic police uniforms?"]
         else:
-            return ["What are the 1930 golden hours?", "How to invoke RBI zero liability rule?"]
+            return ["What are the 1930 golden hours?", "How to invoke RBI zero liability rule?", "How do scammers create psychological urgency?"]
+
+def determine_recommended_actions(intent: str, risk_level: str) -> List[str]:
+    """Dynamically determines action badges based on detected intent and risk."""
+    if risk_level == "emergency":
+        return [
+            "Dial 1930 National Cyber Helpline immediately",
+            "Contact home bank to suspend netbanking & cards",
+            "Collect transaction reference (UTR) numbers",
+            "Lodge formal complaint on cybercrime.gov.in"
+        ]
+    if "upi" in intent or "pin" in intent:
+        return [
+            "Never enter UPI PIN to receive funds",
+            "Decline incoming collect requests immediately",
+            "Block caller/sender on your payment application"
+        ]
+    if "remote_access" in intent or "device" in intent or "apk" in intent:
+        return [
+            "Do not install APKs from WhatsApp, SMS or unverified links",
+            "Never install AnyDesk or screen-sharing tools on caller requests",
+            "Check Device Admin and Accessibility permissions in Settings"
+        ]
+    if "phishing" in intent or "kyc" in intent:
+        return [
+            "Do not click links or call phone numbers in SMS",
+            "Verify billing/KYC status via official bank/discom apps",
+            "Report fraudulent SMS on DoT Chakshu (sancharsaathi.gov.in)"
+        ]
+    if "digital_arrest" in intent:
+        return [
+            "Disconnect video call immediately — digital arrest is 100% fake",
+            "Never transfer funds to any 'verification' bank account",
+            "Lodge complaint with local police or 1930 helpline"
+        ]
+    return [
+        "Maintain confidentiality of passwords, OTPs, and PINs",
+        "Verify institutional claims via official branch or certified apps",
+        "Report active cyber fraud incidents to helpline 1930"
+    ]
 
 async def process_chat_message(
     message: str,
@@ -57,7 +96,7 @@ async def process_chat_message(
     # 1. Detect language
     detected_lang = detect_language(message, fallback_lang=preferred_lang)
 
-    # 2. Detect intent & risk level
+    # 2. Detect intent & risk level with conversational context
     detected_intent, risk_level = detect_intent(message, conversation_history)
 
     # 3. Emergency Fast-Path Check
@@ -66,7 +105,7 @@ async def process_chat_message(
         log_safe_interaction(conversation_id, detected_intent, detected_lang, "emergency", len(message))
         return resp
 
-    # 4. Retrieve Grounded Knowledge
+    # 4. Retrieve Grounded Knowledge using TF-IDF similarity
     retrieved_items = retriever.retrieve(message, detected_intent=detected_intent, top_k=2)
 
     sources = []
@@ -87,44 +126,41 @@ async def process_chat_message(
 
     # 5. AI Response Generation
     answer_text = None
-    response_mode = "retrieval_enhanced"
+    response_mode = "retrieval_only"
+    confidence = 0.50
 
     context_chunks = [
-        f"Query Scenario: {item['prompt']}\nRecommended Safety Action: {item['completion']}"
+        f"Verified Scenario: {item['prompt']}\nRecommended Safety Action: {item['completion']}"
         for item in retrieved_items
     ]
 
-    # Attempt Live AI generation if provider configured
+    # Attempt Live AI generation if provider is configured and available
     if settings.AI_PROVIDER == "gemini" and settings.GEMINI_API_KEY:
         answer_text = await call_gemini(message, conversation_history, context_chunks)
         if answer_text:
             response_mode = "live_ai"
+            top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
+            confidence = min(0.98, max(0.70, round(0.75 + (top_retrieval_sim * 0.23), 2)))
 
     elif settings.AI_PROVIDER == "openai" and settings.OPENAI_API_KEY:
         answer_text = await call_openai(message, conversation_history, context_chunks)
         if answer_text:
             response_mode = "live_ai"
+            top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
+            confidence = min(0.98, max(0.70, round(0.75 + (top_retrieval_sim * 0.23), 2)))
 
-    # Fallback to high-quality retrieval synthesis from Adaption-enhanced dataset
+    # Fallback to retrieval-only mode if no live AI is active or if generation failed
     if not answer_text:
-        answer_text = synthesize_retrieval_response(
+        answer_text, confidence = synthesize_retrieval_response(
             message,
             detected_lang,
             retrieved_items,
             conversation_history
         )
-        response_mode = "retrieval_enhanced"
+        response_mode = "retrieval_only"
 
-    # 6. Recommended Actions Extraction
-    actions = []
-    if "pin" in message.lower() or "qr" in message.lower():
-        actions = ["Never enter PIN to receive money", "Decline unknown collect requests"]
-    elif "link" in message.lower() or "sms" in message.lower():
-        actions = ["Do not click the URL", "Verify via official bank app"]
-    elif "police" in message.lower() or "cbi" in message.lower():
-        actions = ["Disconnect video call", "Report to 1930 helpline"]
-    else:
-        actions = ["Keep credentials confidential", "Dial 1930 in financial emergency"]
+    # 6. Dynamic Recommended Actions
+    actions = determine_recommended_actions(detected_intent, risk_level)
 
     # 7. Follow-up suggestions
     followups = generate_followup_suggestions(detected_intent, detected_lang)
@@ -139,6 +175,6 @@ async def process_chat_message(
         "response_mode": response_mode,
         "recommended_actions": actions,
         "sources": sources,
-        "confidence": 0.95 if response_mode == "live_ai" else 0.90,
+        "confidence": confidence,
         "suggested_followups": followups
     }

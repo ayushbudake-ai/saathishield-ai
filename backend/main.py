@@ -53,11 +53,19 @@ class ChatResponse(BaseModel):
 
 @app.get("/api/health")
 async def health_check():
-    """Health check reporting active AI provider and knowledge base statistics."""
+    """Health check reporting actual AI provider state and knowledge base statistics."""
+    has_live_creds = bool(
+        (settings.AI_PROVIDER == "gemini" and settings.GEMINI_API_KEY) or
+        (settings.AI_PROVIDER == "openai" and settings.OPENAI_API_KEY)
+    )
+    operating_mode = "live_ai" if has_live_creds else "retrieval_only"
+
     return {
         "status": "healthy",
         "version": settings.VERSION,
         "ai_provider": settings.AI_PROVIDER,
+        "live_ai_configured": has_live_creds,
+        "operating_mode": operating_mode,
         "knowledge_items_loaded": len(retriever.knowledge_items),
         "official_sources_registered": len(retriever.sources),
         "rate_limit_per_minute": settings.RATE_LIMIT_PER_MINUTE

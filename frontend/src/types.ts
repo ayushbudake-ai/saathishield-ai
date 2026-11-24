@@ -23,7 +23,7 @@ export interface ChatMessage {
   detectedLanguage?: string;
   detectedIntent?: string;
   riskLevel?: 'emergency' | 'high' | 'moderate' | 'informational';
-  responseMode?: 'live_ai' | 'retrieval_enhanced' | 'emergency' | 'demo';
+  responseMode?: 'live_ai' | 'retrieval_only' | 'retrieval_enhanced' | 'emergency' | 'offline_fallback' | 'demo';
   suggestedFollowups?: string[];
   recommendedActions?: string[];
   sourcesList?: { name: string; url: string; authority?: string }[];

@@ -25,9 +25,11 @@ In accordance with competition rules and responsible AI engineering principles, 
 - The **Scam Message Checker** evaluates structural red flags (urgency tokens, shortlinks, non-bank headers, APK extensions, and keyword coercion).
 - **Text-only analysis cannot prove a message is genuine.** A sophisticated spear-phishing attacker could compose a polite, grammatically perfect message without overt scam keywords. Users are explicitly warned that a "Low Risk" verdict does not constitute an institutional endorsement of authenticity.
 
-### Offline Grounded Assistant vs. Live Model APIs
-- To ensure zero hallucination, zero credential leakage, and 100% adherence to verified Indian statutory circulars, the application operates in **Verified Grounded Dataset Mode**.
-- In this mode, responses are mapped to curated regulatory templates. Complex multi-step hypothetical edge cases outside the 8 canonical threat categories are safely guided toward the 1930 helpline rather than hallucinating speculative answers.
+### Limited Knowledge Mode (Offline Retrieval) vs. Live AI Generation
+- When no external AI provider credentials are configured, the application functions in **Limited Knowledge Mode (Offline Retrieval)**.
+- In this mode, responses are strictly synthesized from the 460 verified dataset instruction pairs. Open-ended questions outside the verified knowledge base will honestly state that a verified match is unavailable in offline mode rather than hallucinating speculative answers.
+- When an AI provider (Google Gemini or OpenAI) is configured server-side via `.env`, the assistant operates in **Live AI Model Mode**, grounding open-ended reasoning in verified safety principles while utilizing conversational history for multi-turn contextual awareness.
+- At no point are API keys exposed to the client browser.
 
 ---
 

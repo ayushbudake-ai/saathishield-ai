@@ -6,11 +6,12 @@ DEVANAGARI_REGEX = re.compile(r'[\u0900-\u097F]')
 # Common Hinglish tokens and colloquial phonetics
 HINGLISH_KEYWORDS = {
     "kya", "kyu", "kaise", "kisko", "kaha", "kab", "kuch", "nahi", "nahin", "mat",
-    "paisa", "paise", "kat", "gaya", "gye", "debit", "credit", "aaya", "aayi", "bheja",
+    "paisa", "paise", "kat", "gaya", "gaye", "gye", "debit", "credit", "aaya", "aayi", "bheja",
     "bhejo", "bheje", "daalo", "daal", "diya", "de", "diye", "bolo", "bol", "raha",
-    "rahi", "hoga", "hogi", "karein", "karu", "kare", "karna", "padega", "padta",
-    "bhai", "sir", "meri", "mera", "mere", "aapka", "aapke", "apna", "apne", "unka",
-    "unhone", "unhe", "call", "msg", "sms", "link", "f फर्जी", "scam", "fraud", "yahan",
+    "rahi", "hoga", "hogi", "karein", "karu", "kare", "karna", "karne", "karta", "karti", "karte",
+    "padega", "padta", "se", "ko", "me", "mein", "par", "ho", "hai", "hain", "sakta", "sakti", "sakte",
+    "tha", "thi", "the", "bhai", "sir", "meri", "mera", "mere", "aapka", "aapke", "apna", "apne", "unka",
+    "unhone", "unhe", "call", "msg", "sms", "link", "scam", "fraud", "yahan",
     "wahan", "turant", "foran", "bachu", "bachein", "batao", "bataya", "rakhein"
 }
 
