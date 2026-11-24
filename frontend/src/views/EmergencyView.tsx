@@ -10,7 +10,7 @@ interface EmergencyViewProps {
 export const EmergencyView: React.FC<EmergencyViewProps> = ({ language }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', padding: '1.5rem 0' }}>
-      {/* Golden Hours Alert Banner */}
+      {/* Emergency Triage Alert Banner */}
       <div style={{ background: 'var(--color-danger-bg)', border: '1px solid var(--color-danger-border)', borderRadius: '8px', padding: '1.75rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
           <div style={{ background: 'var(--color-danger-text)', color: '#FFFFFF', padding: '0.5rem', borderRadius: '6px' }}>
@@ -18,7 +18,7 @@ export const EmergencyView: React.FC<EmergencyViewProps> = ({ language }) => {
           </div>
           <div>
             <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-danger-text)' }}>
-              {language === 'hi' ? "आपातकालीन वित्तीय धोखाधड़ी: शुरुआती 2-3 घंटे (Golden Hours)" : "Active Cyber Fraud Emergency: Golden Hours Protocol"}
+              {language === 'hi' ? "आपातकालीन वित्तीय धोखाधड़ी: तत्काल 1930 रिपोर्टिंग निर्देश" : "Active Cyber Fraud Emergency: Immediate 1930 Triage Protocol"}
             </h1>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-main)' }}>
               {language === 'hi' 

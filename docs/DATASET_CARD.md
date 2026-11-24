@@ -21,7 +21,7 @@
 | `whatsapp_social_engineering` | YouTube like/rating task jobs, KBC lottery voice notes, fake parcel customs | 49 | 10.7% |
 | `digital_arrest_coercion` | Fake police/CBI/ED WhatsApp video calls, narcotics extortion threats | 32 | 7.0% |
 | `remote_access_apk_trojans` | Malicious wedding invitations (.apk), AnyDesk screen-sharing scams | 33 | 7.2% |
-| `emergency_fraud_response` | 1930 National Helpline triage, golden hours fund freezing, cybercrime portal | 33 | 7.2% |
+| `emergency_fraud_response` | 1930 National Helpline triage, immediate inter-bank lien alerts, cybercrime portal | 33 | 7.2% |
 | `general_safety_education` | TRAI DLT SMS headers, biometric Aadhaar locking, public Wi-Fi safety | 31 | 6.7% |
 
 ---

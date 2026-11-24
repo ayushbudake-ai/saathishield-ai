@@ -102,3 +102,10 @@
 - [x] Converted all local `file:///` links across repository documentation to relative links.
 - [x] Expanded evaluation suite `scripts/test_chatbot_intelligence.py` to 36 points passing at 100.0% (36/36).
 - [x] Executed complete verification pipeline: dataset validation, held-out evaluation, QA test suite, and Vite production build.
+
+### Phase 11: Final Repository Audit & Hardening (COMPLETED)
+- [x] CORS hardening: Eliminated wildcard `*` from production allowed origins, enforced explicit local and deployment origins (`localhost:5173`, `127.0.0.1:5173`, Vercel, Netlify), and restricted `allow_credentials` to explicit non-wildcard configurations.
+- [x] Defensible confidence scoring: Replaced arbitrary fixed confidence values (0.95, 0.90, 0.99) with genuine TF-IDF cosine relevance scores grounded in verified knowledge evidence.
+- [x] README & documentation sync: Synchronized 36-point chatbot evaluation count, updated timeout and architecture descriptions, verified clean relative links.
+- [x] Emergency safety terminology: Audited and removed all wording implying a guaranteed 2–3-hour recovery or freezing window across views, handlers, and prompt templates, reinforcing immediate 1930 and cybercrime.gov.in reporting.
+- [x] Executed full verification suite: Python backend test cases, 36/36 chatbot intelligence tests, 460-row dataset validation, and TypeScript production build.

@@ -1,9 +1,9 @@
 from typing import Dict, Any, List
 
-def format_emergency_response(intent: str, lang: str) -> Dict[str, Any]:
+def format_emergency_response(intent: str, lang: str, message: str = "") -> Dict[str, Any]:
     """
     Constructs immediate, prioritized crisis triage instructions.
-    Places urgent life-saving steps at the very top.
+    Calculates defensible evidence confidence based on verified knowledge retrieval relevance.
     """
     sources = [
         {
@@ -159,6 +159,13 @@ def format_emergency_response(intent: str, lang: str) -> Dict[str, Any]:
             actions = ["Terminate video call immediately", "Never transfer any funds", "Report incident to 1930"]
             followups = ["Why do scammers know my name and address?", "What legal actions does I4C take against digital arrest syndicates?"]
 
+    confidence = 0.50
+    if message:
+        from backend.services.retriever import retriever
+        retrieved = retriever.retrieve(message, detected_intent=intent, top_k=1, min_relevance_threshold=0.01)
+        if retrieved:
+            confidence = round(retrieved[0].get("relevance_score", 0.50), 2)
+
     return {
         "answer": answer,
         "detected_intent": intent,
@@ -167,6 +174,6 @@ def format_emergency_response(intent: str, lang: str) -> Dict[str, Any]:
         "response_mode": "emergency",
         "recommended_actions": actions,
         "sources": sources,
-        "confidence": 0.99,
+        "confidence": confidence,
         "suggested_followups": followups
     }

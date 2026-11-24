@@ -15,7 +15,7 @@ In accordance with competition rules and responsible AI engineering principles, 
 
 ### Zero False Recovery Guarantees
 - SaathiShield AI **never guarantees that stolen money can be recovered**.
-- Stolen fund recovery depends entirely on the speed of reporting to 1930 within the "Golden Hours" (initial 2–3 hours), whether the recipient mule account still holds liquidity, and court lien clearance processes.
+- Stolen fund recovery is never guaranteed. It depends on whether the victim reports immediately to 1930 / cybercrime.gov.in so banks can flag beneficiary accounts before funds are withdrawn, whether liquidity remains in mule accounts, and subsequent legal dispute processes.
 
 ---
 

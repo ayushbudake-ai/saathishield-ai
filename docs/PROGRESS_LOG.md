@@ -110,3 +110,12 @@
     - Chatbot intelligence test suite (36/36 tests passed)
     - Frontend TypeScript build (0 errors)
   - Committed and pushed all changes to `origin/main`.
+
+### 2026-11-24 — Session 5: Final Repository Audit, CORS Hardening & Defensible Confidence
+- **16:00 IST**: Implemented final repository audit corrections:
+  - Hardened CORS in `backend/core/config.py` and `backend/main.py`: removed wildcard `*` from production allowed origins, configured explicit local (`localhost:5173`, `127.0.0.1:5173`, `localhost:4173`, `localhost:3000`) and deployment origins (`vercel.app`, `netlify.app`), and restricted `allow_credentials` to explicit non-wildcard configurations.
+  - Replaced arbitrary fixed confidence numbers (0.95, 0.90, 0.99) with genuine TF-IDF and n-gram retrieval cosine relevance scores representing verified evidence grounding.
+  - Cleaned all references implying a guaranteed 2–3-hour recovery or freezing window across `EmergencyView.tsx`, `HomeView.tsx`, `ai_provider.py`, `chat_orchestrator.py`, `LIMITATIONS.md`, `PAGE_LAYOUTS.md`, and `README.md`.
+  - Updated `README.md` to document the 36-point chatbot evaluation suite, 15s timeout, and verified repository tree.
+  - Executed full verification suite: backend tests, 36/36 intelligence tests, dataset validation, TypeScript checks, and Vite production build.
+  - Committed and pushed to `main`.

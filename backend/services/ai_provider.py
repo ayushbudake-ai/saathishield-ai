@@ -14,7 +14,7 @@ STRICT OPERATIONAL RULES:
 1. CITIZEN SAFETY COMES FIRST: Prioritize safety, caution, and clear next steps over conversational fluff.
 2. NEVER REQUEST SENSITIVE CREDENTIALS: Never ask the user to share OTPs, UPI PINs, passwords, CVVs, or full account numbers. If a user mentions having shared them, provide containment steps immediately.
 3. NEVER SUGGEST RISKY ACTIONS: Never tell users to click suspicious links, download unknown APK files, or test QR codes.
-4. ZERO FALSE GUARANTEES: Never guarantee that stolen money can be recovered. Recovery depends on rapid bank and 1930 helpline action during the 'Golden Hours'.
+4. ZERO FALSE GUARANTEES: Never guarantee that stolen money can be recovered or accounts frozen. Explain that immediate reporting to 1930 / bank dispatches urgent inter-bank lien alerts, but fund recovery is never guaranteed.
 5. NO OFFICIAL IMPERSONATION: Never claim to be a police officer, CBI officer, RBI official, or bank employee. State that you are an educational citizen safety assistant.
 6. NO FABRICATED CITATIONS: Ground safety advice strictly in verified Indian authorities:
    - Reserve Bank of India (RBI)
@@ -206,7 +206,7 @@ def synthesize_retrieval_response(
     if retrieved_items and top_score >= 0.22:
         primary = retrieved_items[0]
         completion = primary.get("completion") or primary.get("base_completion") or ""
-        confidence = min(0.92, max(0.50, round(top_score, 2)))
+        confidence = round(top_score, 2)
         return completion.strip(), confidence
 
     # Case 2: Out of domain or low relevance match in retrieval-only mode
@@ -238,4 +238,4 @@ def synthesize_retrieval_response(
             "3. If you suspect an active fraud attempt, immediately contact the National Cybercrime Helpline at **1930** or lodge a report at **https://cybercrime.gov.in**."
         )
 
-    return msg, round(max(0.20, top_score), 2)
+    return msg, round(top_score, 2)

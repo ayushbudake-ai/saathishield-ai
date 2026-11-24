@@ -24,21 +24,21 @@ SaathiShield AI is designed with the sobriety and clarity of an authentic Indian
 
 ### Core Features
 1. **AI Safety Assistant (सुरक्षा सहायक — Hybrid Conversational Architecture)**:
-   - Powered by a decoupled Python FastAPI backend (`backend/`) and resilient client-side grounded synthesis fallback.
+   - Powered by a decoupled Python FastAPI backend (`backend/`) with configurable 15s timeout, granular error handling, defensible evidence relevance scoring, and resilient client-side grounded synthesis fallback.
    - Multilingual conversational interface supporting **हिन्दी (Devanagari)**, **Hinglish (Roman Hindi)**, and **English**.
    - **Intent Classifier & Context Inheritance**: Accurately classifies 12 threat intents and carries conversational context across multi-turn follow-ups (e.g. "They asked me to install AnyDesk" -> "What if I already installed it on my phone?").
-   - **High-Priority Emergency Triage Layer**: Immediate fast-path response with **1930 National Cyber Fraud Helpline** escalation and the **Golden Hours Protocol (first 2-3 hours)** whenever unauthorized debits or video blackmail are reported.
-   - **Grounded Knowledge Retrieval**: In-memory RAG grounded in 460 curated pairs and official regulatory circulars (RBI, NPCI, I4C, DoT Chakshu) with transparent official citations and zero hallucinations.
+   - **High-Priority Emergency Triage Layer**: Immediate fast-path response with **1930 National Cyber Fraud Helpline** and **cybercrime.gov.in** escalation whenever unauthorized debits or video blackmail are reported; guides citizens to report immediately to dispatch inter-bank alerts without promising fund recovery.
+   - **Grounded Knowledge Retrieval & Defensible Evidence Scoring**: In-memory RAG grounded in 460 curated pairs and official regulatory circulars (RBI, NPCI, I4C, DoT Chakshu) with transparent official citations and relevance scores directly derived from knowledge similarity.
    - **Real-Time PII & Credential Sanitizer**: Scrubs OTPs, UPI PINs, CVVs, and card numbers before logging or LLM dispatch.
    - **Configurable AI Providers**: Server-side integration supporting Google Gemini, OpenAI, or pure local grounded RAG via environment variables (`AI_PROVIDER=gemini`). Never exposes API keys in frontend code.
-   - **Response Mode Attribution**: Distinct badges on every response (`⚡ Live AI Model`, `🚨 Emergency Triage`, `🛡️ Verified Knowledge RAG`).
+   - **Response Mode Attribution**: Distinct badges on every response (`⚡ Live AI Model`, `🚨 Emergency Triage`, `📖 Limited Knowledge Mode (RAG)`, `⚠️ Offline Knowledge Fallback`).
    - **Actionable Steps & Related Follow-up Chips**: Provides immediate checkboxes and dynamic clickable suggested follow-up chips.
 2. **Suspicious Message & Scam Checker (संदेश जांचें)**:
    - Privacy-first, client-side heuristic analyzer for questionable SMS, WhatsApp messages, and payment requests.
    - Scans for urgency coercion, APK download links, personal 10-digit senders, unverified bank claims, and shortlinks.
    - Built-in regex privacy filter that automatically redacts and warns against pasting 16-digit card numbers or OTPs.
 3. **Emergency Help & 1930 Triage (आपातकालीन सहायता)**:
-   - **Golden Hours Protocol (first 2–3 hours)** for requesting rapid inter-bank lien alerts through 1930 and CFCFRMS (fund recovery depends on bank processes and is never guaranteed).
+   - **Immediate Emergency Reporting**: Fast-path guidance directing victims to call 1930 or report on cybercrime.gov.in immediately so banks can log lien alerts across beneficiary accounts (recovery is never guaranteed).
    - Instant dialer link for the **National Cyber Fraud Helpline (1930)** and the **`cybercrime.gov.in`** portal.
    - Direct emergency directory and card-blocking SMS codes for major Indian banks (SBI, HDFC, ICICI, PNB, BoB, Axis).
 4. **Interactive Learning Center (जागरूकता केंद्र)**:
@@ -185,7 +185,7 @@ saathishield-ai/
 │   ├── generate_heldout_test.py        # 105-query benchmark generator
 │   ├── evaluate_dataset.py             # Independent rubric scoring engine
 │   ├── test_suite.py                   # 8-suite automated end-to-end QA verifier
-│   └── test_chatbot_intelligence.py    # 25-point chatbot intelligence & safety evaluation
+│   └── test_chatbot_intelligence.py    # 36-point chatbot intelligence & safety evaluation
 ├── docs/
 │   ├── COMPETITION_REQUIREMENTS.md     # Official checklist and submission guidelines
 │   ├── DESIGN_SYSTEM.md                # Visual identity and typography specifications
@@ -195,7 +195,7 @@ saathishield-ai/
 │   ├── SOURCES_AND_LICENSING.md        # Statutory open access and fair use framework
 │   ├── DATASET_CARD.md                 # Full dataset card and schema
 │   ├── EVALUATION_REPORT.md            # Benchmark scoring and regression analysis
-│   ├── TEST_REPORT.md                  # Quality assurance test results (25/25 pass)
+│   ├── TEST_REPORT.md                  # Quality assurance test results (8/8 QA & 36/36 intelligence pass)
 │   ├── DEPLOYMENT.md                   # Local, Vercel, and Netlify deployment guide
 │   ├── LIMITATIONS.md                  # Known edge cases, non-affiliation disclaimer
 │   ├── PROGRESS_LOG.md                 # Engineering session timeline

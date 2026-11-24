@@ -133,8 +133,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ language, onNavigate }) => {
           </h3>
           <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: 1.5 }}>
             {language === 'hi' 
-              ? "पैसे कट गए हैं? जानिए शुरुआती 2-3 घंटे (Golden Hours) में बैंक फ्रीज और 1930 पर रिपोर्ट करने के चरण।"
-              : "Stolen funds? Follow the 4-step emergency triage protocol to halt transactions within the golden hours."}
+              ? "पैसे कट गए हैं? जानिए तुरंत बैंक ब्लॉक और 1930 हेल्पलाइन पर रिपोर्ट दर्ज कराने के आवश्यक 4 चरण।"
+              : "Stolen funds? Follow the 4-step emergency triage protocol to alert your bank and report to 1930 immediately."}
           </p>
         </div>
       </section>

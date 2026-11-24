@@ -29,17 +29,25 @@ class Settings:
     GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
-    # Security & Rate Limiting
+    # Security, CORS & Rate Limiting
     MAX_REQUEST_CHARS: int = 4000
     RATE_LIMIT_PER_MINUTE: int = int(os.getenv("RATE_LIMIT_PER_MINUTE", "60"))
     REQUEST_TIMEOUT_SECONDS: float = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "15.0"))
+    
+    # Explicit allowed origins (wildcards prohibited when credentials enabled)
+    _env_origins = os.getenv("ALLOWED_ORIGINS", "")
     ALLOWED_ORIGINS: List[str] = [
+        origin.strip() for origin in _env_origins.split(",") if origin.strip()
+    ] if _env_origins else [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:4173",
         "http://127.0.0.1:4173",
         "http://localhost:3000",
-        "*"
+        "http://127.0.0.1:3000",
+        "https://saathishield-ai.vercel.app",
+        "https://saathishield-ai.netlify.app",
     ]
+    ALLOW_CREDENTIALS: bool = "*" not in ALLOWED_ORIGINS
 
 settings = Settings()

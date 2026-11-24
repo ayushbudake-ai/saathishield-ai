@@ -15,13 +15,13 @@ app = FastAPI(
     description="Intelligent Multilingual Cybersecurity and Digital Safety Assistant API"
 )
 
-# CORS configuration
+# Explicit CORS configuration (wildcards disallowed with credentials)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.ALLOWED_ORIGINS,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_credentials=settings.ALLOW_CREDENTIALS,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
 )
 
 # Request & Response Schemas
@@ -48,7 +48,7 @@ class ChatResponse(BaseModel):
     response_mode: str
     recommended_actions: List[str]
     sources: List[SourceItem]
-    confidence: float
+    confidence: float = Field(..., description="Evidence relevance score computed from knowledge retrieval similarity (0.0 to 1.0)")
     suggested_followups: List[str]
 
 @app.get("/api/health")

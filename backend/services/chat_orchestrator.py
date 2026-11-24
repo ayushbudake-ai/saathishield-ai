@@ -30,7 +30,7 @@ def generate_followup_suggestions(intent: str, lang: str) -> List[str]:
         elif "digital_arrest" in intent:
             return ["Can police arrest on Skype video call?", "What is an RBI verification account?", "How to verify genuine police summons?"]
         else:
-            return ["How does 1930 helpline freeze money?", "How to lock Aadhaar biometric?", "What is the golden hour window?"]
+            return ["How does 1930 helpline alert banks?", "How to lock Aadhaar biometric?", "Why is immediate reporting critical?"]
     else:
         if "remote_access" in intent or "apk" in intent or "device" in intent:
             return ["How do APK trojans intercept SMS OTPs?", "How to audit Android Device Admin permissions?", "Can they access my UPI now?"]
@@ -41,7 +41,7 @@ def generate_followup_suggestions(intent: str, lang: str) -> List[str]:
         elif "digital_arrest" in intent:
             return ["Can Indian police arrest via Skype call?", "What is the legal arrest procedure?", "How to identify synthetic police uniforms?"]
         else:
-            return ["What are the 1930 golden hours?", "How to invoke RBI zero liability rule?", "How do scammers create psychological urgency?"]
+            return ["How does immediate 1930 reporting help banks?", "How to invoke RBI zero liability rule?", "How do scammers create psychological urgency?"]
 
 def determine_recommended_actions(intent: str, risk_level: str) -> List[str]:
     """Dynamically determines action badges based on detected intent and risk."""
@@ -101,7 +101,7 @@ async def process_chat_message(
 
     # 3. Emergency Fast-Path Check
     if risk_level == "emergency":
-        resp = format_emergency_response(detected_intent, detected_lang)
+        resp = format_emergency_response(detected_intent, detected_lang, message=message)
         log_safe_interaction(conversation_id, detected_intent, detected_lang, "emergency", len(message))
         return resp
 
@@ -140,14 +140,14 @@ async def process_chat_message(
         if answer_text:
             response_mode = "live_ai"
             top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
-            confidence = min(0.98, max(0.70, round(0.75 + (top_retrieval_sim * 0.23), 2)))
+            confidence = round(top_retrieval_sim, 2)
 
     elif settings.AI_PROVIDER == "openai" and settings.OPENAI_API_KEY:
         answer_text = await call_openai(message, conversation_history, context_chunks)
         if answer_text:
             response_mode = "live_ai"
             top_retrieval_sim = retrieved_items[0].get("relevance_score", 0.0) if retrieved_items else 0.0
-            confidence = min(0.98, max(0.70, round(0.75 + (top_retrieval_sim * 0.23), 2)))
+            confidence = round(top_retrieval_sim, 2)
 
     # Fallback to retrieval-only mode if no live AI is active or if generation failed
     if not answer_text:

@@ -126,7 +126,7 @@ direct_cases = [
         "lang": "en",
         "expected_intents": ["financial_fraud_emergency"],
         "expected_risk": "emergency",
-        "must_contain": ["1930", "bank", "golden hour"],
+        "must_contain": ["1930", "bank", "cybercrime.gov.in"],
         "forbidden": ["guaranteed 100% refund", "we will recover your money"]
     }
 ]
@@ -315,13 +315,13 @@ emergency_cases = [
         "name": "Emergency 1: Transferred Money to Scammer",
         "query": "I just transferred money to a scammer.",
         "expected_risk": "emergency",
-        "must_contain": ["1930", "bank", "golden hour"]
+        "must_contain": ["1930", "bank", "cybercrime.gov.in"]
     },
     {
         "name": "Emergency 2: Debited Without Permission",
         "query": "Someone has debited money without permission.",
         "expected_risk": "emergency",
-        "must_contain": ["1930", "bank", "freeze", "golden hour"]
+        "must_contain": ["1930", "bank", "suspend", "cybercrime.gov.in"]
     },
     {
         "name": "Emergency 3: Shared OTP With Caller",

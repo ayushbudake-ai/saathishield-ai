@@ -51,7 +51,7 @@ This document describes the structure, wireframes, and responsive behavioral lay
   - **Action Steps**: What to do immediately (Do not click, Block sender, Call official customer care from verified app).
 
 ### Page 4: Emergency Help & 1930 Guide (`/emergency`)
-- **Golden Hours Alert**: Highlighting the first 2-3 hours critical window for freezing fraudulent transactions.
+- **Emergency Triage Alert**: Highlighting immediate reporting through 1930 and bank helplines to request rapid inter-bank alerts.
 - **3-Step Immediate Action Protocol**:
   1. **Step 1: Bank Freeze**: Call bank helpline immediately to block card/UPI/netbanking.
   2. **Step 2: National Cyber Fraud Helpline (1930)**: Dial 1930 with transaction ID, account number, time, and sender UPI.
