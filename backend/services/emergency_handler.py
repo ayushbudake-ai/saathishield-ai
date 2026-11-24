@@ -21,37 +21,40 @@ def format_emergency_response(intent: str, lang: str) -> Dict[str, Any]:
     if intent == "financial_fraud_emergency":
         if lang == "hi":
             answer = (
-                "🚨 **आपातकालीन वित्तीय सुरक्षा चेतावनी (तत्काल कार्रवाई करें)**\n\n"
-                "यदि आपके खाते से अभी अनधिकृत पैसे कटे हैं, तो शुरुआती 2-3 घंटे (Golden Hours) पैसे को रास्ते में फ्रीज करवाने के लिए सबसे महत्वपूर्ण हैं:\n\n"
-                "1. **तुरंत 1930 पर कॉल करें**: भारत सरकार की राष्ट्रीय साइबर हेल्पलाइन **1930** पर अभी कॉल करें। यह सिस्टम सीधे सभी बैंकों से जुड़ा है और ठग के खाते में पैसे पहुंचते ही उस ट्रांजेक्शन पर Lien (रोक) लगा देता है।\n"
-                "2. **बैंक को तुरंत ब्लॉक करवाएं**: अपने बैंक के 24x7 हेल्पलाइन पर कॉल करके डेबिट कार्ड, UPI और नेटबैंकिंग को तुरंत फ्रीज करवाएं ताकि ठग और पैसे न निकाल सकें।\n"
-                "3. **आवश्यक विवरण तैयार रखें**: अपना खाता नंबर, कटी हुई रकम, ट्रांजेक्शन UTR नंबर, समय और जिस UPI ID/खाते में पैसे गए हैं, उसे लिखकर रखें।\n"
-                "4. **पोर्टल पर औपचारिक शिकायत**: कॉल के बाद https://cybercrime.gov.in पर शिकायत दर्ज करें और पावती रसीद लेकर 3 दिनों के भीतर अपनी बैंक शाखा में लिखित पत्र जमा करें (RBI Zero Liability नियम के तहत)।"
+                "🚨 **आपातकालीन वित्तीय सुरक्षा सहायता (तुरंत कार्रवाई करें)**\n\n"
+                "यदि आपके खाते से अनधिकृत पैसे कटे हैं, तो तुरंत आधिकारिक रिपोर्ट दर्ज कराएं ताकि संबंधित बैंक समय रहते ट्रांजेक्शन अलर्ट दर्ज कर सकें (महत्वपूर्ण: किसी भी राशि की वापसी अथवा खातों के फ्रीज होने की कोई गारंटी नहीं होती):\n\n"
+                "1. **तुरंत 1930 पर कॉल करें**: भारत सरकार की राष्ट्रीय साइबर हेल्पलाइन **1930** पर तुरंत कॉल करें। यह प्रणाली बैंकों को अंतर-बैंक अलर्ट और लेन-देन पर रोक (Lien request) का अनुरोध प्रेषित करती है।\n"
+                "2. **बैंक को तुरंत ब्लॉक करवाएं**: अपने बैंक के 24x7 आपातकालीन नंबर पर कॉल करके डेबिट कार्ड, UPI और नेटबैंकिंग को तुरंत निलंबित करवाएं ताकि आगे कोई कटौती न हो सके।\n"
+                "3. **आवश्यक विवरण तैयार रखें**: अपना खाता नंबर, कटी हुई रकम, ट्रांजेक्शन आईडी (UTR नंबर / UPI Ref ID), सटीक समय और प्राप्तकर्ता की जानकारी नोट रखें।\n"
+                "4. **साइबर पोर्टल पर औपचारिक शिकायत**: कॉल के बाद https://cybercrime.gov.in पर रिपोर्ट दर्ज करें और पावती संख्या (Acknowledgement) लेकर 3 कार्य दिवसों के भीतर अपनी बैंक शाखा में लिखित विवाद पत्र जमा करें।\n\n"
+                "⚠️ अस्वीकरण: साथीशील्ड एक शैक्षिक नागरिक सुरक्षा सहायक है, कोई पुलिस या बैंक प्राधिकरण नहीं। फंड रिकवरी या फ्रीजिंग की कोई गारंटी नहीं दी जा सकती।"
             )
             actions = ["1930 पर तुरंत कॉल करें", "बैंक कार्ड और UPI ब्लॉक करें", "cybercrime.gov.in पर रिपोर्ट दर्ज करें"]
-            followups = ["बैंक में लिखित शिकायत कैसे जमा करें?", "गोल्डन ऑवर्स के बाद पैसे वापस कैसे मिलते हैं?"]
+            followups = ["बैंक में लिखित शिकायत कैसे जमा करें?", "साइबर पोर्टल पर पावती रसीद कैसे प्राप्त करें?"]
         elif lang == "hi-en":
             answer = (
                 "🚨 **EMERGENCY: Immediate Financial Triage Steps**\n\n"
-                "Agar aapke bank account se abhi unauthorized money debit hua hai, to first 2-3 hours (Golden Hours) funds ko freeze karwane ke liye critical hain:\n\n"
-                "1. **Dial 1930 Helpline Immediately**: Abhi foran **1930** par call karein. Ye government ka Citizen Financial Cyber Fraud System hai jo beneficiary bank me transaction ko freeze kar deta hai.\n"
-                "2. **Block Bank & Card**: Apne bank customer care par call karke card, UPI aur netbanking foran freeze karwayein taaki aur deduction na ho sake.\n"
+                "Agar aapke bank account se unauthorized deduction hua hai, to foran official channels par report karein taaki banks alert record kar sakein (Important: Funds freeze ya recovery ki koi guaranteed assurance nahi hoti):\n\n"
+                "1. **Dial 1930 Helpline Immediately**: Abhi foran **1930** National Cyber Crime Helpline par call karein. Ye system beneficiary banks ko inter-bank alert aur lien request send karta hai.\n"
+                "2. **Block Bank & Card**: Apne bank customer care par call karke card, UPI aur netbanking foran suspend karwayein taaki aur transaction na ho sake.\n"
                 "3. **Keep Details Ready**: Account number, exact deducted amount, UTR / Transaction Reference ID aur beneficiary details note kar lein.\n"
-                "4. **File on cybercrime.gov.in**: 1930 call ke baad portal par formal complaint darj karein aur acknowledgment slip bank me 3 days ke andar submit karein."
+                "4. **File on cybercrime.gov.in**: 1930 call ke baad portal par formal complaint darj karein aur acknowledgment slip bank branch me 3 working days ke andar submit karein.\n\n"
+                "⚠️ Disclaimer: SaathiShield is an educational citizen companion, not police or banking authority. Fund recovery or account freezing is never guaranteed."
             )
             actions = ["Dial 1930 Cyber Helpline", "Block card & netbanking", "File complaint at cybercrime.gov.in"]
-            followups = ["What if 1930 is busy?", "How does RBI zero liability rule work?"]
+            followups = ["What if 1930 helpline is busy?", "How does RBI 3-day customer notification rule work?"]
         else:
             answer = (
                 "🚨 **ACTIVE FINANCIAL FRAUD: IMMEDIATE EMERGENCY TRIAGE**\n\n"
-                "If unauthorized money has been debited from your account, act within the critical initial 2–3 hours ('Golden Hours') to halt inter-bank settlement:\n\n"
-                "1. **Dial 1930 Immediately**: Call the National Cyber Crime Helpline **1930** (operated by I4C/MHA) right away. This network dispatches automated freeze instructions to beneficiary banks before cash is withdrawn at ATMs.\n"
-                "2. **Emergency Bank Blockade**: Call your bank's 24x7 helpline to immediately suspend your debit card, UPI handles, and internet banking credentials.\n"
+                "If unauthorized money has been debited from your account, act immediately through official authorities to maximize the chance that financial institutions can flag the transaction before cash withdrawal (Statutory Note: Fund recovery or account freezing is NEVER guaranteed):\n\n"
+                "1. **Dial 1930 Immediately**: Call the National Cyber Crime Helpline **1930** (operated by I4C/MHA) right away. This system dispatches urgent inter-bank alerts and lien requests across beneficiary payment switches.\n"
+                "2. **Emergency Bank Blockade**: Call your bank's verified 24x7 helpline to immediately suspend your debit card, UPI handles, and internet banking credentials.\n"
                 "3. **Assemble Transaction Evidence**: Record your account number, exact debit timestamp, UTR reference number, and recipient UPI/account details.\n"
-                "4. **Formal Portal Filing**: Register your complaint on https://cybercrime.gov.in, save the acknowledgment receipt, and submit a written dispute to your home bank branch within 3 working days."
+                "4. **Formal Portal Filing**: Register your complaint on https://cybercrime.gov.in, save the acknowledgment receipt, and submit a written dispute to your home bank branch within 3 working days.\n\n"
+                "⚠️ Statutory Disclaimer: SaathiShield is an educational citizen guidance companion, not a law enforcement agency or bank. Fund recovery or account freezing is subject to formal investigation and is never guaranteed."
             )
             actions = ["Call 1930 Helpline immediately", "Block all bank accounts & cards", "Submit formal grievance on cybercrime.gov.in"]
-            followups = ["How to notify home branch under RBI 3-day rule?", "How do banks freeze destination mule accounts?"]
+            followups = ["How to notify home branch under RBI 3-day rule?", "What documents are needed for bank dispute?"]
 
     elif intent == "credential_leak_emergency":
         if lang == "hi":

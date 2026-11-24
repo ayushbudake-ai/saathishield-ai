@@ -38,7 +38,7 @@ SaathiShield AI is designed with the sobriety and clarity of an authentic Indian
    - Scans for urgency coercion, APK download links, personal 10-digit senders, unverified bank claims, and shortlinks.
    - Built-in regex privacy filter that automatically redacts and warns against pasting 16-digit card numbers or OTPs.
 3. **Emergency Help & 1930 Triage (आपातकालीन सहायता)**:
-   - **Golden Hours Protocol (first 2–3 hours)** for freezing inter-bank fund settlements.
+   - **Golden Hours Protocol (first 2–3 hours)** for requesting rapid inter-bank lien alerts through 1930 and CFCFRMS (fund recovery depends on bank processes and is never guaranteed).
    - Instant dialer link for the **National Cyber Fraud Helpline (1930)** and the **`cybercrime.gov.in`** portal.
    - Direct emergency directory and card-blocking SMS codes for major Indian banks (SBI, HDFC, ICICI, PNB, BoB, Axis).
 4. **Interactive Learning Center (जागरूकता केंद्र)**:
@@ -62,7 +62,7 @@ In compliance with the project's strict design guidelines, SaathiShield AI featu
 | **Warning / Caution** | `#B46B18` | Warm ochre amber for suspicious message indicators |
 | **Typography** | `Noto Sans Devanagari` + `Inter` | Verified Devanagari line-height (`1.7`) ensuring no conjunct clipping |
 
-Detailed documentation: [docs/DESIGN_SYSTEM.md](file:///F:/competitions/hackyard/docs/DESIGN_SYSTEM.md) | [docs/COLOR_TOKENS.md](file:///F:/competitions/hackyard/docs/COLOR_TOKENS.md)
+Detailed documentation: [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) | [docs/COLOR_TOKENS.md](docs/COLOR_TOKENS.md)
 
 ---
 
@@ -93,7 +93,7 @@ Every single instruction pair is grounded in public advisories from:
 4. **Sanchar Saathi (DoT / Govt of India)**: Chakshu fraudulent communication facility and TAFCOP.
 5. **CERT-In**: Android malicious APK trojan advisories.
 
-Audit register: [data/source_register.csv](file:///F:/competitions/hackyard/data/source_register.csv) | [docs/SOURCES_AND_LICENSING.md](file:///F:/competitions/hackyard/docs/SOURCES_AND_LICENSING.md)
+Audit register: [data/source_register.csv](data/source_register.csv) | [docs/SOURCES_AND_LICENSING.md](docs/SOURCES_AND_LICENSING.md)
 
 ---
 
@@ -110,7 +110,7 @@ The dataset was prepared, uploaded, and enhanced using the official **Adaption p
 5. **Relative Improvement**: **+44.8%**
 6. **Exported Enriched Dataset**: `data/adaption/saathishield_enhanced.csv` (`enhanced_prompt`, `enhanced_completion`).
 
-Execution logs: [data/adaption/README.md](file:///F:/competitions/hackyard/data/adaption/README.md) | [data/adaption/run_log.csv](file:///F:/competitions/hackyard/data/adaption/run_log.csv)
+Execution logs: [data/adaption/README.md](data/adaption/README.md) | [data/adaption/run_log.csv](data/adaption/run_log.csv)
 
 ---
 
@@ -128,7 +128,7 @@ To evaluate genuine real-world efficacy beyond platform-internal metrics, we con
 
 *Key Finding: The most significant qualitative leap occurred in **Actionability & Numbered Steps (+38.2%)**, where brief conversational responses were transformed into structured, step-by-step crisis playbooks.*
 
-Full evaluation report: [docs/EVALUATION_REPORT.md](file:///F:/competitions/hackyard/docs/EVALUATION_REPORT.md)
+Full evaluation report: [docs/EVALUATION_REPORT.md](docs/EVALUATION_REPORT.md)
 
 ---
 
@@ -254,4 +254,4 @@ python scripts/test_suite.py
 ---
 
 ## 10. Legal Notice & Disclaimer
-*SaathiShield AI is an educational technology demonstration developed for academic competition purposes. It is NOT affiliated with the Reserve Bank of India, State Police departments, Ministry of Home Affairs, or commercial banks. In the event of active financial loss, citizens should dial **1930** or visit **`https://cybercrime.gov.in`**.*
+*SaathiShield AI is an educational technology demonstration developed for academic competition purposes. It is NOT affiliated with the Reserve Bank of India, State Police departments, Ministry of Home Affairs, or commercial banks. It does not guarantee monetary recovery or transaction reversal. In the event of active financial loss, citizens should dial **1930** or visit **`https://cybercrime.gov.in`** immediately.*

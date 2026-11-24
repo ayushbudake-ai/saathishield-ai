@@ -22,8 +22,8 @@ export const EmergencyView: React.FC<EmergencyViewProps> = ({ language }) => {
             </h1>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-main)' }}>
               {language === 'hi' 
-                ? "यदि आपके बैंक खाते से अभी-अभी धोखे से पैसे कटे हैं, तो समय बहुत कीमती है। तुरंत इन 4 चरणों का पालन करें।"
-                : "If money has been unauthorizedly debited, act immediately within the first 2-3 hours to freeze inter-bank settlement."}
+                ? "यदि आपके बैंक खाते से अनधिकृत पैसे कटे हैं, तो समय पर शिकायत दर्ज कराएं ताकि बैंक स्तर पर जांच शुरू हो सके। (नोट: धन वापसी अथवा खाते फ्रीज होने की कोई कानूनी गारंटी नहीं होती)"
+                : "If money has been unauthorizedly debited, act immediately through official helplines to flag the transaction before withdrawal. Note: Fund recovery is never guaranteed."}
             </p>
           </div>
         </div>
